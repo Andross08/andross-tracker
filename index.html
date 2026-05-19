@@ -49,6 +49,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);min-he
 .empty{text-align:center;padding:60px;color:var(--t2)}
 .refresh{position:fixed;bottom:20px;right:20px;background:var(--ac);color:#fff;border:none;padding:10px 18px;border-radius:10px;font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;cursor:pointer;box-shadow:0 4px 20px rgba(99,102,241,.3);transition:transform .15s}
 .refresh:hover{transform:translateY(-2px)}
+.loading{text-align:center;padding:60px;color:var(--t2);font-size:14px}
 @media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr)}.c{padding:12px 10px}}
 </style>
 </head>
@@ -56,18 +57,29 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);min-he
 <div class="c">
   <div class="hdr">
     <h1>🎯 ANDROSS TRACKER</h1>
-    <div class="hdr-sub" id="subtitle">Loading...</div>
+    <div class="hdr-sub" id="subtitle">Loading data...</div>
   </div>
   <div class="stats" id="statsGrid"></div>
   <div class="props" id="propsGrid"></div>
   <div class="filters" id="filters"></div>
-  <div id="betsContainer"></div>
+  <div id="betsContainer"><div class="loading">Loading bets...</div></div>
 </div>
 <button class="refresh" onclick="location.reload()">↻ Refresh</button>
 
 <script>
-const bets = __BETS_PLACEHOLDER__;
+let bets = [];
 let filter = 'all';
+
+async function loadData() {
+  try {
+    const r = await fetch('data.json?t=' + Date.now());
+    bets = await r.json();
+    render();
+  } catch (e) {
+    document.getElementById('subtitle').textContent = '❌ Cannot load data.json';
+    document.getElementById('betsContainer').innerHTML = '<div class="empty"><h3>Error loading data</h3><p>Make sure data.json exists in the repo.</p></div>';
+  }
+}
 
 function calcPL(b) {
   const odds = parseInt(b.odds_american);
@@ -95,7 +107,7 @@ function render() {
   const mlbW = mlbR.filter(b => b.status === 'won');
   const mlbPL = mlbR.reduce((s, b) => s + calcPL(b), 0);
 
-  document.getElementById('subtitle').textContent = `v2.4 + Tier System • ${bets.length} bets • Reload to refresh`;
+  document.getElementById('subtitle').textContent = `v2.4 + Tier System • ${bets.length} bets • Last updated: ${new Date().toLocaleDateString()}`;
 
   document.getElementById('statsGrid').innerHTML = `
     <div class="sc a"><div class="sc-l">Record</div><div class="sc-v">${won.length}W-${lost.length}L</div><div class="sc-s">${pend.length} pending</div></div>
@@ -197,7 +209,7 @@ function setFilter(f) {
   render();
 }
 
-render();
+loadData();
 </script>
 </body>
 </html>
