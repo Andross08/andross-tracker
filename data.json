@@ -4239,7 +4239,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.610683",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 5.0,
+    "graded_at": "2026-05-20T10:08:33.229032"
   },
   {
     "player_name": "Ajay Mitchell",
@@ -4291,7 +4293,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.626450",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 12.0,
+    "graded_at": "2026-05-20T10:08:33.230454"
   },
   {
     "player_name": "De'Aaron Fox",
@@ -4343,7 +4347,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.639244",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 24.0,
+    "graded_at": "2026-05-20T10:08:33.231914"
   },
   {
     "player_name": "Donovan Mitchell",
@@ -4369,7 +4375,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.645315",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 3.0,
+    "graded_at": "2026-05-20T10:08:33.232971"
   },
   {
     "player_name": "Mikal Bridges",
@@ -4395,7 +4403,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.650867",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 1.0,
+    "graded_at": "2026-05-20T10:08:33.233618"
   },
   {
     "player_name": "Miles McBride",
@@ -4421,7 +4431,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.656045",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 2.0,
+    "graded_at": "2026-05-20T10:08:33.234214"
   },
   {
     "player_name": "Miles McBride",
@@ -4447,7 +4459,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.661104",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 3.0,
+    "graded_at": "2026-05-20T10:08:33.234842"
   },
   {
     "player_name": "Dean Wade",
@@ -4473,7 +4487,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.666377",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 10.0,
+    "graded_at": "2026-05-20T10:08:33.235495"
   },
   {
     "player_name": "Miles McBride",
@@ -4499,7 +4515,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.671427",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 0.0,
+    "graded_at": "2026-05-20T10:08:33.236128"
   },
   {
     "player_name": "Luguentz Dort",
@@ -4551,7 +4569,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.682079",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 1.0,
+    "graded_at": "2026-05-20T10:08:33.237404"
   },
   {
     "player_name": "OG Anunoby",
@@ -4577,7 +4597,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.687123",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 2.0,
+    "graded_at": "2026-05-20T10:08:33.238190"
   },
   {
     "player_name": "Keldon Johnson",
@@ -4707,7 +4729,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.721188",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 5.0,
+    "graded_at": "2026-05-20T10:08:33.240180"
   },
   {
     "player_name": "Shai Gilgeous-Alexander",
@@ -4811,7 +4835,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.753453",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 8.0,
+    "graded_at": "2026-05-20T10:08:33.241748"
   },
   {
     "player_name": "Dennis Schroder",
@@ -4837,7 +4863,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.761227",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 0.0,
+    "graded_at": "2026-05-20T10:08:33.242325"
   },
   {
     "player_name": "Dennis Schroder",
@@ -4863,7 +4891,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.769230",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 8.0,
+    "graded_at": "2026-05-20T10:08:33.242985"
   },
   {
     "player_name": "Emmet Sheehan",
@@ -4889,7 +4919,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.777196",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 2.0,
+    "graded_at": "2026-05-20T10:08:33.243646"
   },
   {
     "player_name": "Mikal Bridges",
@@ -4915,7 +4947,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.784203",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 5.0,
+    "graded_at": "2026-05-20T10:08:33.244234"
   },
   {
     "player_name": "Evan Mobley",
@@ -4941,7 +4975,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.790885",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 32.0,
+    "graded_at": "2026-05-20T10:08:33.244899"
   },
   {
     "player_name": "Karl-Anthony Towns",
@@ -4967,7 +5003,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.796725",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 13.0,
+    "graded_at": "2026-05-20T10:08:33.245498"
   },
   {
     "player_name": "Jarrett Allen",
@@ -4993,7 +5031,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.803231",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 20.0,
+    "graded_at": "2026-05-20T10:08:33.246123"
   },
   {
     "player_name": "Stephon Castle",
@@ -5045,7 +5085,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.815114",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 3.0,
+    "graded_at": "2026-05-20T10:08:33.247037"
   },
   {
     "player_name": "Chet Holmgren",
@@ -5097,7 +5139,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.827107",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 37.0,
+    "graded_at": "2026-05-20T10:08:33.247922"
   },
   {
     "player_name": "Shai Gilgeous-Alexander",
@@ -5175,7 +5219,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.843682",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 20.0,
+    "graded_at": "2026-05-20T10:08:33.249128"
   },
   {
     "player_name": "Jalen Brunson",
@@ -5201,7 +5247,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.848721",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 49.0,
+    "graded_at": "2026-05-20T10:08:33.249804"
   },
   {
     "player_name": "Karl-Anthony Towns",
@@ -5227,6 +5275,8 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.853563",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 31.0,
+    "graded_at": "2026-05-20T10:08:33.250438"
   }
 ]
