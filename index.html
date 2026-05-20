@@ -39,6 +39,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);min-he
 .bet-tier{font-size:9px;font-weight:700;margin-right:4px;padding:1px 4px;border-radius:3px}
 .tier-a{color:var(--gn);background:rgba(34,197,94,.1)}
 .tier-b{color:var(--t2);background:rgba(136,146,164,.1)}
+.tier-c{color:#e0a458;background:rgba(224,164,88,.12)}
 .bet-meta{font-size:11px;color:var(--t2);font-family:'JetBrains Mono',monospace;margin-top:2px}
 .edge-h{color:var(--gn)}.edge-m{color:var(--gl)}.edge-l{color:var(--t2)}
 .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace;flex-shrink:0}
@@ -65,150 +66,45 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);min-he
   <div id="betsContainer"><div class="loading">Loading bets...</div></div>
 </div>
 <button class="refresh" onclick="location.reload()">↻ Refresh</button>
-
 <script>
-let bets = [];
-let filter = 'all';
-
-async function loadData() {
-  try {
-    const r = await fetch('data.json?t=' + Date.now());
-    bets = await r.json();
-    render();
-  } catch (e) {
-    document.getElementById('subtitle').textContent = '❌ Cannot load data.json';
-    document.getElementById('betsContainer').innerHTML = '<div class="empty"><h3>Error loading data</h3><p>Make sure data.json exists in the repo.</p></div>';
-  }
-}
-
-function calcPL(b) {
-  const odds = parseInt(b.odds_american);
-  if (b.status === 'won') return odds > 0 ? 5 * (odds / 100) : 5 * (100 / Math.abs(odds));
-  if (b.status === 'lost') return -5;
-  return 0;
-}
-
-function getSport(b) {
-  const prop = (b.prop_type || '');
-  if (['Strikeouts','Hits','Total Bases','Home Runs','RBIs','Runs','Stolen Bases'].includes(prop)) return 'mlb';
-  return 'nba';
-}
-
-function render() {
-  const res = bets.filter(b => b.status === 'won' || b.status === 'lost');
-  const won = res.filter(b => b.status === 'won');
-  const lost = res.filter(b => b.status === 'lost');
-  const pend = bets.filter(b => b.status === 'pending');
-  const wr = res.length > 0 ? (won.length / res.length * 100) : 0;
-  const pl = res.reduce((s, b) => s + calcPL(b), 0);
-  const roi = res.length > 0 ? (pl / (res.length * 5) * 100) : 0;
-
-  const mlbR = res.filter(b => getSport(b) === 'mlb');
-  const mlbW = mlbR.filter(b => b.status === 'won');
-  const mlbPL = mlbR.reduce((s, b) => s + calcPL(b), 0);
-
-  document.getElementById('subtitle').textContent = `v2.4 + Tier System • ${bets.length} bets • Last updated: ${new Date().toLocaleDateString()}`;
-
-  document.getElementById('statsGrid').innerHTML = `
-    <div class="sc a"><div class="sc-l">Record</div><div class="sc-v">${won.length}W-${lost.length}L</div><div class="sc-s">${pend.length} pending</div></div>
-    <div class="sc ${wr>=55?'g':wr>=50?'gl':'r'}"><div class="sc-l">Win Rate</div><div class="sc-v" style="color:${wr>=55?'var(--gn)':wr>=50?'var(--gl)':'var(--rd)'}">${wr.toFixed(1)}%</div><div class="sc-s">${res.length} resolved</div></div>
-    <div class="sc ${pl>=0?'g':'r'}"><div class="sc-l">P/L ($5 flat)</div><div class="sc-v" style="color:${pl>=0?'var(--gn)':'var(--rd)'}">${pl>=0?'+':''}$${pl.toFixed(2)}</div><div class="sc-s">ROI: ${roi>=0?'+':''}${roi.toFixed(1)}%</div></div>
-    <div class="sc gl"><div class="sc-l">MLB K's</div><div class="sc-v" style="color:var(--gl)">${mlbW.length}W-${mlbR.length-mlbW.length}L</div><div class="sc-s">P/L: ${mlbPL>=0?'+':''}$${mlbPL.toFixed(2)}</div></div>
-  `;
-
-  const ps = {};
-  res.forEach(b => {
-    const p = b.prop_type;
-    if (!ps[p]) ps[p] = { w: 0, l: 0, pl: 0 };
-    if (b.status === 'won') { ps[p].w++; ps[p].pl += calcPL(b); }
-    else { ps[p].l++; ps[p].pl -= 5; }
-  });
-  document.getElementById('propsGrid').innerHTML = Object.entries(ps)
-    .sort((a, b) => b[1].pl - a[1].pl)
-    .map(([p, s]) => `<div class="prop-tag"><span style="color:var(--t2)">${p}</span> <span style="color:${s.pl>=0?'var(--gn)':'var(--rd)'};font-weight:600">${s.w}-${s.l} $${s.pl>=0?'+':''}${s.pl.toFixed(0)}</span></div>`)
-    .join('');
-
-  const filterDefs = [
-    ['all','All',bets.length],['pending','⏳ Pending',pend.length],['won','✅ Won',won.length],
-    ['lost','❌ Lost',lost.length],['tierA','🅰️ Tier A',bets.filter(b=>b.tier==='A').length],['nba','🏀 NBA',null],['mlb','⚾ MLB',null]
-  ];
-  document.getElementById('filters').innerHTML = filterDefs.map(([k,l,c]) =>
-    `<button class="fbtn ${filter===k?'on':''}" onclick="setFilter('${k}')">${l}${c!==null?' ('+c+')':''}</button>`
-  ).join('');
-
-  let fb = [...bets];
-  if (filter === 'pending') fb = fb.filter(b => b.status === 'pending');
-  else if (filter === 'won') fb = fb.filter(b => b.status === 'won');
-  else if (filter === 'lost') fb = fb.filter(b => b.status === 'lost');
-  else if (filter === 'nba') fb = fb.filter(b => getSport(b) === 'nba');
-  else if (filter === 'mlb') fb = fb.filter(b => getSport(b) === 'mlb');
-  else if (filter === 'tierA') fb = fb.filter(b => b.tier === 'A');
-
-  const groups = {};
-  fb.forEach(b => {
-    const ct = b.commence_time || '';
-    const dateMatch = ct.match(/^(\w+ \d+)/);
-    const dateStr = dateMatch ? dateMatch[1] : 'Unknown';
-    const k = `${b.event}|${dateStr}`;
-    if (!groups[k]) groups[k] = { event: b.event, date: dateStr, sport: getSport(b), bets: [] };
-    groups[k].bets.push(b);
-  });
-
-  const gl = Object.values(groups).sort((a, b) => {
-    const ap = a.bets.some(x => x.status === 'pending');
-    const bp = b.bets.some(x => x.status === 'pending');
-    if (ap && !bp) return -1;
-    if (!ap && bp) return 1;
-    return 0;
-  });
-
-  if (gl.length === 0) {
-    document.getElementById('betsContainer').innerHTML = '<div class="empty"><h3>No bets match filter</h3></div>';
-    return;
-  }
-
-  let html = '';
-  for (const g of gl) {
-    const gW = g.bets.filter(b => b.status === 'won').length;
-    const gL = g.bets.filter(b => b.status === 'lost').length;
-    const gR = gW + gL;
-    const emoji = g.sport === 'mlb' ? '⚾' : '🏀';
-    const borderColor = g.sport === 'mlb' ? 'var(--gl)' : 'var(--ac)';
-    const record = gR > 0 ? `<span style="font-size:11px;font-family:'JetBrains Mono',monospace;color:${gW>gL?'var(--gn)':gW===gL?'var(--gl)':'var(--rd)'}">${gW}W-${gL}L</span>` : '';
-
-    html += `<div class="group"><div class="gh" style="border-left:3px solid ${borderColor}">
-      <div><div class="gh-t">${emoji} ${g.event}</div><div class="gh-d">${g.date}</div></div>${record}</div>`;
-
-    const sorted = g.bets.sort((a, b) => b.edge - a.edge);
-    for (const bet of sorted) {
-      const ep = (bet.edge * 100).toFixed(1);
-      const ec = bet.edge >= 0.20 ? 'edge-h' : bet.edge >= 0.12 ? 'edge-m' : 'edge-l';
-      const sc = bet.status || 'pending';
-      const tierTag = bet.tier === 'A' ? '<span class="bet-tier tier-a">🅰️</span>' :
-                       bet.tier === 'B' ? '<span class="bet-tier tier-b">🅱️</span>' : '';
-      const statusBadge = `<span class="badge badge-${sc}">${sc.toUpperCase()}</span>`;
-      const actualStat = bet.actual_stat !== undefined ? ` | Result: <span class="actual">${bet.actual_stat}</span>` : '';
-      const avgRatio = bet.avg_ratio ? ` | ${bet.avg_ratio}x` : '';
-
-      html += `<div class="bet ${sc}">
-        <div class="bet-info">
-          <div class="bet-top">${tierTag}${bet.player_name} <span>— ${bet.prop_type} O ${bet.line}</span></div>
-          <div class="bet-meta">${bet.odds_american} | Edge: <span class="${ec}">${ep}%</span> | Avg: ${bet.season_avg}${avgRatio}${actualStat}</div>
-        </div>
-        ${statusBadge}
-      </div>`;
-    }
-    html += '</div>';
-  }
-
-  document.getElementById('betsContainer').innerHTML = html;
-}
-
-function setFilter(f) {
-  filter = f;
-  render();
-}
-
+let bets=[];let filter='all';
+async function loadData(){try{const r=await fetch('data.json?t='+Date.now());bets=await r.json();render()}catch(e){document.getElementById('subtitle').textContent='❌ Cannot load data.json';document.getElementById('betsContainer').innerHTML='<div class="empty"><h3>Error loading data</h3></div>'}}
+function calcPL(b){const o=parseInt(b.odds_american);if(b.status==='won')return o>0?5*(o/100):5*(100/Math.abs(o));if(b.status==='lost')return -5;return 0}
+function getSport(b){const p=(b.prop_type||'');if(['Strikeouts','Hits','Total Bases','Home Runs','RBIs','Runs','Stolen Bases'].includes(p))return'mlb';return'nba'}
+function render(){
+const res=bets.filter(b=>b.status==='won'||b.status==='lost'),won=res.filter(b=>b.status==='won'),lost=res.filter(b=>b.status==='lost'),pend=bets.filter(b=>b.status==='pending');
+const wr=res.length>0?(won.length/res.length*100):0,pl=res.reduce((s,b)=>s+calcPL(b),0),roi=res.length>0?(pl/(res.length*5)*100):0;
+const mlbR=res.filter(b=>getSport(b)==='mlb'),mlbW=mlbR.filter(b=>b.status==='won'),mlbPL=mlbR.reduce((s,b)=>s+calcPL(b),0);
+document.getElementById('subtitle').textContent=`v2.5 + Calibration • ${bets.length} bets • ${new Date().toLocaleDateString()}`;
+document.getElementById('statsGrid').innerHTML=`
+<div class="sc a"><div class="sc-l">Record</div><div class="sc-v">${won.length}W-${lost.length}L</div><div class="sc-s">${pend.length} pending</div></div>
+<div class="sc ${wr>=55?'g':wr>=50?'gl':'r'}"><div class="sc-l">Win Rate</div><div class="sc-v" style="color:${wr>=55?'var(--gn)':wr>=50?'var(--gl)':'var(--rd)'}">${wr.toFixed(1)}%</div><div class="sc-s">${res.length} resolved</div></div>
+<div class="sc ${pl>=0?'g':'r'}"><div class="sc-l">P/L ($5 flat)</div><div class="sc-v" style="color:${pl>=0?'var(--gn)':'var(--rd)'}">${pl>=0?'+':''}$${pl.toFixed(2)}</div><div class="sc-s">ROI: ${roi>=0?'+':''}${roi.toFixed(1)}%</div></div>
+<div class="sc gl"><div class="sc-l">MLB K's</div><div class="sc-v" style="color:var(--gl)">${mlbW.length}W-${mlbR.length-mlbW.length}L</div><div class="sc-s">P/L: ${mlbPL>=0?'+':''}$${mlbPL.toFixed(2)}</div></div>`;
+const ps={};res.forEach(b=>{const p=b.prop_type;if(!ps[p])ps[p]={w:0,l:0,pl:0};if(b.status==='won'){ps[p].w++;ps[p].pl+=calcPL(b)}else{ps[p].l++;ps[p].pl-=5}});
+document.getElementById('propsGrid').innerHTML=Object.entries(ps).sort((a,b)=>b[1].pl-a[1].pl).map(([p,s])=>`<div class="prop-tag"><span style="color:var(--t2)">${p}</span> <span style="color:${s.pl>=0?'var(--gn)':'var(--rd)'};font-weight:600">${s.w}-${s.l} $${s.pl>=0?'+':''}${s.pl.toFixed(0)}</span></div>`).join('');
+const fd=[['all','All',bets.length],['pending','⏳ Pending',pend.length],['won','✅ Won',won.length],['lost','❌ Lost',lost.length],['tierA','🅰️ Tier A',bets.filter(b=>b.tier==='A').length],['tierC','🅲 Tier C',bets.filter(b=>b.tier==='C').length],['nba','🏀 NBA',null],['mlb','⚾ MLB',null]];
+document.getElementById('filters').innerHTML=fd.map(([k,l,c])=>`<button class="fbtn ${filter===k?'on':''}" onclick="setFilter('${k}')">${l}${c!==null?' ('+c+')':''}</button>`).join('');
+let fb=[...bets];
+if(filter==='pending')fb=fb.filter(b=>b.status==='pending');
+else if(filter==='won')fb=fb.filter(b=>b.status==='won');
+else if(filter==='lost')fb=fb.filter(b=>b.status==='lost');
+else if(filter==='nba')fb=fb.filter(b=>getSport(b)==='nba');
+else if(filter==='mlb')fb=fb.filter(b=>getSport(b)==='mlb');
+else if(filter==='tierA')fb=fb.filter(b=>b.tier==='A');
+else if(filter==='tierC')fb=fb.filter(b=>b.tier==='C');
+const groups={};fb.forEach(b=>{const ct=b.commence_time||'';const dm=ct.match(/^(\w+ \d+)/);const ds=dm?dm[1]:'Unknown';const k=`${b.event}|${ds}`;if(!groups[k])groups[k]={event:b.event,date:ds,sport:getSport(b),bets:[]};groups[k].bets.push(b)});
+const gl=Object.values(groups).sort((a,b)=>{const ap=a.bets.some(x=>x.status==='pending'),bp=b.bets.some(x=>x.status==='pending');if(ap&&!bp)return -1;if(!ap&&bp)return 1;return 0});
+if(gl.length===0){document.getElementById('betsContainer').innerHTML='<div class="empty"><h3>No bets match filter</h3></div>';return}
+let html='';for(const g of gl){const gW=g.bets.filter(b=>b.status==='won').length,gL=g.bets.filter(b=>b.status==='lost').length,gR=gW+gL;const emoji=g.sport==='mlb'?'⚾':'🏀';const bc=g.sport==='mlb'?'var(--gl)':'var(--ac)';const rec=gR>0?`<span style="font-size:11px;font-family:'JetBrains Mono',monospace;color:${gW>gL?'var(--gn)':gW===gL?'var(--gl)':'var(--rd)'}">${gW}W-${gL}L</span>`:'';
+html+=`<div class="group"><div class="gh" style="border-left:3px solid ${bc}"><div><div class="gh-t">${emoji} ${g.event}</div><div class="gh-d">${g.date}</div></div>${rec}</div>`;
+const sorted=g.bets.sort((a,b)=>b.edge-a.edge);for(const bet of sorted){const ep=(bet.edge*100).toFixed(1);const ec=bet.edge>=0.20?'edge-h':bet.edge>=0.12?'edge-m':'edge-l';const sc=bet.status||'pending';
+const tt=bet.tier==='A'?'<span class="bet-tier tier-a">🅰️</span>':bet.tier==='B'?'<span class="bet-tier tier-b">🅱️</span>':bet.tier==='C'?'<span class="bet-tier tier-c">🅲</span>':'';
+const sb=`<span class="badge badge-${sc}">${sc.toUpperCase()}</span>`;const as=bet.actual_stat!==undefined?` | Result: <span class="actual">${bet.actual_stat}</span>`:'';const ar=bet.avg_ratio?` | ${bet.avg_ratio}x`:'';
+const mins=bet.recent_minutes?` | ${bet.recent_minutes}min`:'';const flag=bet.edge_flagged?' ⚠️':'';
+html+=`<div class="bet ${sc}"><div class="bet-info"><div class="bet-top">${tt}${bet.player_name} <span>— ${bet.prop_type} O ${bet.line}</span></div><div class="bet-meta">${bet.odds_american} | Edge: <span class="${ec}">${ep}%${flag}</span> | Avg: ${bet.season_avg}${ar}${mins}${as}</div></div>${sb}</div>`}html+='</div>'}
+document.getElementById('betsContainer').innerHTML=html}
+function setFilter(f){filter=f;render()}
 loadData();
 </script>
 </body>
