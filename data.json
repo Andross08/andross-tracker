@@ -4267,7 +4267,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.619186",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 10.0,
+    "graded_at": "2026-05-21T09:10:47.444673"
   },
   {
     "player_name": "Sam Merrill",
@@ -4543,7 +4545,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.676583",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 14.0,
+    "graded_at": "2026-05-21T09:10:47.459491"
   },
   {
     "player_name": "Miles McBride",
@@ -4625,7 +4629,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.692846",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 5.0,
+    "graded_at": "2026-05-21T09:10:47.460568"
   },
   {
     "player_name": "Isaiah Hartenstein",
@@ -4651,7 +4657,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.699362",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 13.0,
+    "graded_at": "2026-05-21T09:10:47.461567"
   },
   {
     "player_name": "Isaiah Hartenstein",
@@ -4677,7 +4685,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.706482",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 26.0,
+    "graded_at": "2026-05-21T09:10:47.462559"
   },
   {
     "player_name": "Keldon Johnson",
@@ -4703,7 +4713,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.713828",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 16.0,
+    "graded_at": "2026-05-21T09:10:47.463748"
   },
   {
     "player_name": "Dennis Schroder",
@@ -4757,7 +4769,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.729254",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 30.0,
+    "graded_at": "2026-05-21T09:10:47.464904"
   },
   {
     "player_name": "De'Aaron Fox",
@@ -4809,7 +4823,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.744896",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 10.0,
+    "graded_at": "2026-05-21T09:10:47.477493"
   },
   {
     "player_name": "Jacob Misiorowski",
@@ -5059,7 +5075,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.809539",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 38.0,
+    "graded_at": "2026-05-21T09:10:47.478534"
   },
   {
     "player_name": "Jarrett Allen",
@@ -5113,7 +5131,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.821181",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 2.0,
+    "graded_at": "2026-05-21T09:10:47.479764"
   },
   {
     "player_name": "Donovan Mitchell",
@@ -5167,7 +5187,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.832463",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 43.0,
+    "graded_at": "2026-05-21T09:10:47.480849"
   },
   {
     "player_name": "Chet Holmgren",
@@ -5193,7 +5215,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.838315",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 19.0,
+    "graded_at": "2026-05-21T09:10:47.481781"
   },
   {
     "player_name": "OG Anunoby",
@@ -5278,5 +5302,113 @@
     "status": "lost",
     "actual_stat": 31.0,
     "graded_at": "2026-05-20T10:08:33.250438"
+  },
+  {
+    "player_name": "Luguentz Dort",
+    "prop_type": "Rebounds",
+    "line": 2.5,
+    "odds_american": "-114",
+    "odds_decimal": 1.877,
+    "implied_prob": 0.5327102803738317,
+    "real_prob": 0.676,
+    "edge": 0.14328971962616832,
+    "season_avg": 3.6,
+    "recent_avg": 4.4,
+    "season_hit_rate": "68% (47/69)",
+    "recent_hit_rate": "80% (8/10)",
+    "consistency": "Low",
+    "is_value": true,
+    "role": "starter",
+    "avg_ratio": 1.42,
+    "line_margin": 0.42,
+    "minutes_adj": 1.0,
+    "edge_flagged": false,
+    "prob_raw": 0.732,
+    "market_key": "player_rebounds",
+    "recent_minutes": 36.4,
+    "season_minutes": 26.8,
+    "minutes_drop": false,
+    "kelly_bet": 2.34,
+    "kelly_bet_full": 4.68,
+    "potential_win": 2.05,
+    "tier": "A",
+    "event": "Oklahoma City Thunder @ San Antonio Spurs",
+    "commence_time": "May 23, 12:40 AM",
+    "sport": "basketball_nba",
+    "mode": "simulation",
+    "recorded_at": "2026-05-21T09:06:09.457824",
+    "status": "pending"
+  },
+  {
+    "player_name": "Mikal Bridges",
+    "prop_type": "PTS+REB+AST",
+    "line": 19.5,
+    "odds_american": "-104",
+    "odds_decimal": 1.962,
+    "implied_prob": 0.5098039215686274,
+    "real_prob": 0.676,
+    "edge": 0.16619607843137263,
+    "season_avg": 22.2,
+    "recent_avg": 26.5,
+    "season_hit_rate": "59% (48/82)",
+    "recent_hit_rate": "80% (8/10)",
+    "consistency": "Medium",
+    "is_value": true,
+    "role": "starter",
+    "avg_ratio": 1.14,
+    "line_margin": 0.137,
+    "minutes_adj": 1.0,
+    "edge_flagged": false,
+    "prob_raw": 0.714,
+    "market_key": "player_points_rebounds_assists",
+    "recent_minutes": 36.6,
+    "season_minutes": 33.3,
+    "minutes_drop": false,
+    "kelly_bet": 2.34,
+    "kelly_bet_full": 4.68,
+    "potential_win": 2.25,
+    "tier": "B",
+    "event": "Cleveland Cavaliers @ New York Knicks",
+    "commence_time": "May 22, 12:10 AM",
+    "sport": "basketball_nba",
+    "mode": "simulation",
+    "recorded_at": "2026-05-21T09:06:09.470547",
+    "status": "pending"
+  },
+  {
+    "player_name": "Isaiah Hartenstein",
+    "prop_type": "PTS+REB+AST",
+    "line": 19.5,
+    "odds_american": "-110",
+    "odds_decimal": 1.909,
+    "implied_prob": 0.5238095238095238,
+    "real_prob": 0.676,
+    "edge": 0.1521904761904762,
+    "season_avg": 22.1,
+    "recent_avg": 28.0,
+    "season_hit_rate": "64% (30/47)",
+    "recent_hit_rate": "90% (9/10)",
+    "consistency": "Medium",
+    "is_value": true,
+    "role": "starter",
+    "avg_ratio": 1.14,
+    "line_margin": 0.136,
+    "minutes_adj": 1.0,
+    "edge_flagged": false,
+    "prob_raw": 0.795,
+    "market_key": "player_points_rebounds_assists",
+    "recent_minutes": 32.8,
+    "season_minutes": 24.3,
+    "minutes_drop": false,
+    "kelly_bet": 2.34,
+    "kelly_bet_full": 4.68,
+    "potential_win": 2.13,
+    "tier": "B",
+    "event": "Oklahoma City Thunder @ San Antonio Spurs",
+    "commence_time": "May 23, 12:40 AM",
+    "sport": "basketball_nba",
+    "mode": "simulation",
+    "recorded_at": "2026-05-21T09:06:09.479750",
+    "status": "pending"
   }
 ]
