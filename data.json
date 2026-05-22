@@ -4323,7 +4323,8 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.633188",
-    "status": "pending"
+    "status": "void",
+    "result": "void - DNP"
   },
   {
     "player_name": "Mikal Bridges",
@@ -4797,7 +4798,8 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-19T09:01:33.736952",
-    "status": "pending"
+    "status": "void",
+    "result": "void - DNP"
   },
   {
     "player_name": "Isaiah Hartenstein",
