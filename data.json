@@ -5493,9 +5493,7 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-22T09:14:13.957670",
-    "status": "lost",
-    "actual_stat": 23.0,
-    "graded_at": "2026-05-23T10:02:46.541354"
+    "status": "pending"
   },
   {
     "player_name": "Tomoyuki Sugano",
@@ -5568,9 +5566,7 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-22T09:28:10.554887",
-    "status": "won",
-    "actual_stat": 3.0,
-    "graded_at": "2026-05-23T10:02:46.543358"
+    "status": "pending"
   },
   {
     "player_name": "Sam Merrill",
@@ -5607,9 +5603,7 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-22T09:28:10.563611",
-    "status": "lost",
-    "actual_stat": 4.0,
-    "graded_at": "2026-05-23T10:02:46.544458"
+    "status": "pending"
   },
   {
     "player_name": "Isaiah Hartenstein",
@@ -5760,9 +5754,7 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-22T09:28:10.595289",
-    "status": "lost",
-    "actual_stat": 3.0,
-    "graded_at": "2026-05-23T10:02:46.547858"
+    "status": "pending"
   },
   {
     "player_name": "Keldon Johnson",
