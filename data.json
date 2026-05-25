@@ -7170,5 +7170,31 @@
     "mode": "simulation",
     "recorded_at": "2026-05-25T13:56:21.234095",
     "status": "pending"
+  },
+  {
+    "player_name": "Evan Mobley",
+    "prop_type": "PTS+REB+AST",
+    "line": 29.5,
+    "odds_american": "-104",
+    "odds_decimal": 1.96,
+    "implied_prob": 0.51,
+    "real_prob": 0.62,
+    "edge": 0.196,
+    "season_avg": 34.2,
+    "recent_avg": 35.0,
+    "season_hit_rate": "65%",
+    "recent_hit_rate": "70%",
+    "consistency": "Medium",
+    "is_value": true,
+    "kelly_bet": 4.68,
+    "potential_win": 4.5,
+    "event": "New York Knicks @ Cleveland Cavaliers",
+    "commence_time": "May 26, 12:10 AM",
+    "mode": "simulation",
+    "recorded_at": "2026-05-25T14:10:00",
+    "status": "pending",
+    "tier": "A",
+    "avg_ratio": 1.16,
+    "sport": "basketball_nba"
   }
 ]
