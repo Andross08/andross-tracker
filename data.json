@@ -7196,5 +7196,31 @@
     "tier": "A",
     "avg_ratio": 1.16,
     "sport": "basketball_nba"
+  },
+  {
+    "player_name": "Shai Gilgeous-Alexander",
+    "prop_type": "Points",
+    "line": 28.5,
+    "odds_american": "-130",
+    "odds_decimal": 1.769,
+    "implied_prob": 0.5652173913043478,
+    "real_prob": 0.8302173913043478,
+    "edge": 0.265,
+    "season_avg": 31.1,
+    "recent_avg": 33.0,
+    "season_hit_rate": "63% (43/68)",
+    "recent_hit_rate": "90% (9/10)",
+    "consistency": "High",
+    "is_value": true,
+    "kelly_bet": 4.68,
+    "potential_win": 3.6,
+    "event": "San Antonio Spurs @ Oklahoma City Thunder",
+    "commence_time": "May 27, 12:40 AM",
+    "mode": "simulation",
+    "recorded_at": "2026-05-25T14:30:00",
+    "status": "pending",
+    "tier": "A",
+    "avg_ratio": 1.09,
+    "sport": "basketball_nba"
   }
 ]
