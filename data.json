@@ -6537,7 +6537,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-24T09:32:42.490569",
-    "status": "pending"
+    "status": "void",
+    "actual_stat": "DNP",
+    "graded_at": "2026-05-26T15:55:36.193462"
   },
   {
     "player_name": "Dennis Schroder",
@@ -6574,7 +6576,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-24T09:32:42.502345",
-    "status": "pending"
+    "status": "void",
+    "actual_stat": "DNP",
+    "graded_at": "2026-05-26T15:55:36.193462"
   },
   {
     "player_name": "Dennis Schroder",
@@ -6611,7 +6615,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-24T09:32:42.512894",
-    "status": "pending"
+    "status": "void",
+    "actual_stat": "DNP",
+    "graded_at": "2026-05-26T15:55:36.193462"
   },
   {
     "player_name": "De'Aaron Fox",
@@ -7264,7 +7270,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-25T15:34:13.505505",
-    "status": "pending"
+    "status": "void",
+    "actual_stat": "DNP",
+    "graded_at": "2026-05-26T15:55:36.193462"
   },
   {
     "player_name": "Dean Wade",
