@@ -8104,7 +8104,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-27T08:41:07.024130",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 2.0,
+    "graded_at": "2026-05-29T09:03:48.534257"
   },
   {
     "player_name": "Luguentz Dort",
@@ -8141,7 +8143,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-27T08:41:07.039504",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 5.0,
+    "graded_at": "2026-05-29T09:03:48.535530"
   },
   {
     "player_name": "Cristopher Sanchez",
@@ -8214,7 +8218,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-27T08:41:07.064826",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 5.0,
+    "graded_at": "2026-05-29T09:03:48.536706"
   },
   {
     "player_name": "Dylan Harper",
@@ -8251,7 +8257,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-27T08:41:07.075239",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 28.0,
+    "graded_at": "2026-05-29T09:03:48.538112"
   },
   {
     "player_name": "Keldon Johnson",
@@ -8288,7 +8296,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-28T08:36:15.707172",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 12.0,
+    "graded_at": "2026-05-29T09:03:48.538981"
   },
   {
     "player_name": "Dylan Harper",
@@ -8325,7 +8335,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-28T08:36:15.760366",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 28.0,
+    "graded_at": "2026-05-29T09:03:48.539656"
   },
   {
     "player_name": "Luke Kornet",
