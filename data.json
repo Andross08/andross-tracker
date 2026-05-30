@@ -8667,7 +8667,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-05-29T10:52:17.737492",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 2.0,
+    "graded_at": "2026-05-30T11:53:01.124061"
   },
   {
     "player_name": "Isaiah Hartenstein",
@@ -8741,6 +8743,39 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-30T10:21:00.027033",
+    "status": "pending"
+  },
+  {
+    "player_name": "Both Teams To Score",
+    "prop_type": "BTTS",
+    "line": "Yes",
+    "odds_american": "+121",
+    "odds_decimal": 2.21,
+    "implied_prob": 0.45248868778280543,
+    "boosted": true,
+    "kelly_bet": 5.0,
+    "potential_win": 6.05,
+    "event": "Paris Saint-Germain vs Arsenal",
+    "commence_time": "May 30, 2026 - Champions League Final",
+    "sport": "soccer_uefa_champs_league",
+    "mode": "manual",
+    "recorded_at": "2026-05-30T10:44:43.186304",
+    "status": "pending"
+  },
+  {
+    "player_name": "Total Goals",
+    "prop_type": "Goals O/U",
+    "line": 2.5,
+    "odds_american": "-128",
+    "odds_decimal": 1.781,
+    "implied_prob": 0.5614035087719298,
+    "kelly_bet": 5.0,
+    "potential_win": 3.91,
+    "event": "Paris Saint-Germain vs Arsenal",
+    "commence_time": "May 30, 2026 - Champions League Final",
+    "sport": "soccer_uefa_champs_league",
+    "mode": "manual",
+    "recorded_at": "2026-05-30T10:44:43.186304",
     "status": "pending"
   }
 ]
