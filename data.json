@@ -8374,7 +8374,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-29T09:02:14.739742",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 2.0,
+    "graded_at": "2026-05-31T16:59:00.372886"
   },
   {
     "player_name": "Jalen Williams",
@@ -8411,7 +8413,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-29T10:52:17.689041",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 25.0,
+    "graded_at": "2026-05-31T16:59:00.373853"
   },
   {
     "player_name": "Luguentz Dort",
@@ -8448,7 +8452,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-29T10:52:17.697545",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 1.0,
+    "graded_at": "2026-05-31T16:59:00.374191"
   },
   {
     "player_name": "Keldon Johnson",
@@ -8485,7 +8491,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-29T10:52:17.705064",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 11.0,
+    "graded_at": "2026-05-31T16:59:00.374462"
   },
   {
     "player_name": "Jalen Williams",
@@ -8522,7 +8530,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-29T10:52:17.711086",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 11.0,
+    "graded_at": "2026-05-31T16:59:00.374789"
   },
   {
     "player_name": "Luguentz Dort",
@@ -8559,7 +8569,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-29T10:52:17.717065",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 6.0,
+    "graded_at": "2026-05-31T16:59:00.375043"
   },
   {
     "player_name": "Isaiah Hartenstein",
@@ -8596,7 +8608,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-29T10:52:17.723602",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 5.0,
+    "graded_at": "2026-05-31T16:59:00.375296"
   },
   {
     "player_name": "Dylan Harper",
@@ -8633,7 +8647,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-29T10:52:17.731248",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 12.0,
+    "graded_at": "2026-05-31T16:59:00.375537"
   },
   {
     "player_name": "Shota Imanaga",
@@ -8706,7 +8722,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-30T10:21:00.020374",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 12.0,
+    "graded_at": "2026-05-31T16:59:00.375721"
   },
   {
     "player_name": "Chet Holmgren",
@@ -8743,7 +8761,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-05-30T10:21:00.027033",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 8.0,
+    "graded_at": "2026-05-31T16:59:00.375910"
   },
   {
     "player_name": "Both Teams To Score",
