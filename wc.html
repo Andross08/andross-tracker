@@ -6,49 +6,51 @@
 <title>AI PREDICTIONS — World Cup 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://flagcdn.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
   /* surfaces */
-  --bg:#f5f6fa;
+  --bg:#eef0f6;
   --bg2:#ffffff;
-  --bg3:#fafbfc;
-  --bg4:#f0f2f7;
-  /* WC 26 official colors */
+  --bg3:#f6f8fc;
+  --bg4:#e8ebf2;
+  /* WC 26 official */
   --green:#3CAC3B;
   --green-2:#5cc05b;
-  --green-3:#2d8a2c;
-  --green-bg:rgba(60,172,59,.10);
-  --green-bd:rgba(60,172,59,.35);
+  --green-3:#1f7a1e;
+  --green-bg:rgba(60,172,59,.14);
+  --green-bd:rgba(60,172,59,.45);
   --red:#E61D25;
   --red-2:#f04a51;
-  --red-3:#b8141a;
-  --red-bg:rgba(230,29,37,.08);
-  --red-bd:rgba(230,29,37,.32);
+  --red-3:#a8121a;
+  --red-bg:rgba(230,29,37,.12);
+  --red-bd:rgba(230,29,37,.45);
   --blue:#2A398D;
   --blue-2:#4960c9;
-  --blue-3:#1d2865;
-  --blue-bg:rgba(42,57,141,.08);
-  --blue-bd:rgba(42,57,141,.30);
-  /* premium gold (used sparingly: trophy, "26" outline, demo chip) */
+  --blue-3:#1a2360;
+  --blue-bg:rgba(42,57,141,.12);
+  --blue-bd:rgba(42,57,141,.45);
+  /* premium gold (sparingly) */
   --gold:#D4AF37;
   --gold-2:#e6c558;
-  --gold-bg:rgba(212,175,55,.12);
-  --gold-bd:rgba(212,175,55,.40);
+  --gold-3:#9a7c1f;
+  --gold-bg:rgba(212,175,55,.16);
+  --gold-bd:rgba(212,175,55,.55);
   /* text */
   --tx:#1a1f2e;
   --tx-h:#0a0e1a;
-  --t2:#6b7280;
-  --t3:#9ca3af;
+  --t2:#525b6b;
+  --t3:#8b94a5;
   --t4:#cbd0d8;
   /* borders */
-  --bd:#e5e7eb;
-  --bd2:#d1d5db;
-  /* shadows */
-  --shadow-sm:0 1px 2px rgba(15,23,42,.04), 0 1px 3px rgba(15,23,42,.04);
-  --shadow:0 4px 14px rgba(15,23,42,.06), 0 2px 4px rgba(15,23,42,.04);
-  --shadow-lg:0 12px 36px rgba(15,23,42,.10), 0 4px 12px rgba(15,23,42,.05);
-  --shadow-blue:0 6px 20px rgba(42,57,141,.20);
+  --bd:#d8dde6;
+  --bd2:#bcc3d0;
+  /* shadows — bumped for legibility */
+  --shadow-sm:0 1px 3px rgba(15,23,42,.08), 0 1px 2px rgba(15,23,42,.06);
+  --shadow:0 6px 16px rgba(15,23,42,.10), 0 3px 6px rgba(15,23,42,.06);
+  --shadow-lg:0 16px 40px rgba(15,23,42,.14), 0 6px 14px rgba(15,23,42,.08);
+  --shadow-blue:0 8px 22px rgba(42,57,141,.30);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 ::selection{background:var(--blue);color:#fff}
@@ -60,19 +62,19 @@ body{
   min-height:100vh;
   -webkit-font-smoothing:antialiased;
   background-image:
-    radial-gradient(900px 500px at 95% -8%,rgba(42,57,141,.04),transparent 60%),
-    radial-gradient(700px 400px at -8% 0%,rgba(60,172,59,.04),transparent 60%);
+    radial-gradient(900px 500px at 95% -8%,rgba(42,57,141,.05),transparent 60%),
+    radial-gradient(700px 400px at -8% 0%,rgba(60,172,59,.05),transparent 60%);
 }
-.wrap{max-width:1240px;margin:0 auto;padding:32px 24px 90px}
+.wrap{max-width:1240px;margin:0 auto;padding:28px 24px 90px}
 
-/* Top stripe with the 3 WC colors */
+/* Top stripe */
 .banner-stripe{
-  height:4px;
+  height:5px;
   background:linear-gradient(90deg,var(--red) 0%,var(--green) 50%,var(--blue) 100%);
 }
 
 /* ===== HEADER ===== */
-.hdr{position:relative;display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-bottom:26px;border-bottom:1px solid var(--bd);overflow:hidden}
+.hdr{position:relative;display:flex;align-items:center;justify-content:space-between;margin-bottom:30px;padding-bottom:24px;border-bottom:2px solid var(--bd);overflow:hidden}
 .hdr-l{position:relative;z-index:2}
 .hdr-l h1{
   font-size:46px;
@@ -83,9 +85,9 @@ body{
 }
 .hdr-l h1 .ai{color:var(--blue)}
 .hdr-l h1 .pred{color:var(--blue-3)}
-.hdr-l .sub{font-size:14px;color:var(--t2);font-weight:300;margin-top:9px;letter-spacing:.4px}
+.hdr-l .sub{font-size:14px;color:var(--t2);font-weight:400;margin-top:10px;letter-spacing:.3px}
 .hdr-l .sub b{color:var(--blue-3);font-weight:700}
-.hdr-l .demo{display:inline-block;margin-left:8px;padding:2px 9px;border-radius:5px;background:var(--gold-bg);border:1px solid var(--gold-bd);color:#9a7c1f;font-size:10px;font-weight:700;letter-spacing:1px}
+.hdr-l .demo{display:inline-block;margin-left:8px;padding:2px 9px;border-radius:5px;background:var(--gold-bg);border:1px solid var(--gold-bd);color:var(--gold-3);font-size:10px;font-weight:800;letter-spacing:1px}
 .hdr-26{
   position:absolute;
   right:-6px;
@@ -97,40 +99,40 @@ body{
   letter-spacing:-10px;
   color:transparent;
   -webkit-text-stroke:2.5px var(--gold);
-  opacity:.38;
+  opacity:.35;
   pointer-events:none;
   z-index:1;
   user-select:none;
 }
 .hdr-chip{
   position:relative;z-index:2;display:inline-flex;align-items:center;gap:8px;
-  padding:9px 18px;border-radius:8px;
+  padding:11px 20px;border-radius:9px;
   background:linear-gradient(135deg,var(--red) 0%,var(--green) 50%,var(--blue) 100%);
   color:#fff;
   box-shadow:var(--shadow-blue);
 }
-.hdr-chip span{font-size:11px;font-weight:800;letter-spacing:2px}
+.hdr-chip span{font-size:12px;font-weight:800;letter-spacing:2px}
 
-/* ===== STATS ===== */
-.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:22px}
+/* ===== STATS — bigger, bolder ===== */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:24px}
 .sc{
   position:relative;background:var(--bg2);
-  border:1px solid var(--bd);border-radius:14px;padding:18px;
+  border:1px solid var(--bd);border-radius:14px;padding:20px 18px;
   overflow:hidden;
   box-shadow:var(--shadow-sm);
   transition:transform .18s,box-shadow .18s,border-color .18s;
 }
 .sc:hover{border-color:var(--bd2);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
-.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue)}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue)}
 .sc.green::before{background:var(--green)}
 .sc.red::before{background:var(--red)}
 .sc.blue::before{background:var(--blue)}
 .sc.tri::before{background:linear-gradient(90deg,var(--red),var(--green),var(--blue))}
-.sc .l{font-size:10px;color:var(--t2);text-transform:uppercase;letter-spacing:1.8px;font-weight:600;margin-bottom:8px}
-.sc .v{font-size:26px;font-weight:900;letter-spacing:-1px;line-height:1;color:var(--tx-h);font-variant-numeric:tabular-nums}
-.sc .s{font-size:11px;color:var(--t2);margin-top:8px;font-weight:400}
+.sc .l{font-size:11px;color:var(--t2);text-transform:uppercase;letter-spacing:1.8px;font-weight:700;margin-bottom:10px}
+.sc .v{font-size:32px;font-weight:900;letter-spacing:-1.2px;line-height:1;color:var(--tx-h);font-variant-numeric:tabular-nums}
+.sc .s{font-size:12px;color:var(--t2);margin-top:9px;font-weight:500}
 
-/* ===== PANEL ===== */
+/* ===== PANELS ===== */
 .panel{
   background:var(--bg2);border:1px solid var(--bd);
   border-radius:16px;padding:22px;margin-bottom:18px;
@@ -140,98 +142,241 @@ body{
 .panel:hover{border-color:var(--bd2);box-shadow:var(--shadow)}
 .pt{font-size:14px;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:10px;color:var(--blue-3);letter-spacing:.2px}
 .pt .ico{font-size:16px;opacity:.85}
-.pt .r{margin-left:auto;font-size:11px;color:var(--t2);font-weight:500;font-variant-numeric:tabular-nums}
+.pt .r{margin-left:auto;font-size:12px;color:var(--blue-3);font-weight:700;font-variant-numeric:tabular-nums}
 
 /* ===== CHART ===== */
-.chart{position:relative;width:100%;height:220px}
+.chart{position:relative;width:100%;height:230px}
 .chart svg{width:100%;height:100%;display:block}
 .tip{
   position:absolute;pointer-events:none;
   background:var(--bg2);border:1px solid var(--bd2);border-radius:9px;
-  padding:8px 12px;font-size:11px;color:var(--tx);
+  padding:9px 13px;font-size:11px;color:var(--tx);
   opacity:0;transition:opacity .12s;z-index:10;white-space:nowrap;
   box-shadow:var(--shadow-lg);
 }
-.tip .v{font-weight:700;font-size:13px;font-variant-numeric:tabular-nums}
-.tip .l{color:var(--t2);font-size:9px;margin-top:2px}
+.tip .v{font-weight:800;font-size:14px;font-variant-numeric:tabular-nums}
+.tip .l{color:var(--t2);font-size:10px;margin-top:3px;font-weight:500}
 
-/* ===== CONTROLS ===== */
-.controls{
+/* ===== FILTER BAR (orden: Periodo → Mercado → Fase) ===== */
+.fbar{
   background:var(--bg2);border:1px solid var(--bd);
-  border-radius:16px;padding:18px;margin-bottom:20px;
+  border-radius:16px;padding:20px;margin-bottom:22px;
   box-shadow:var(--shadow-sm);
 }
-.ctl-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
-.ctl-row:last-child{margin-bottom:0}
-.ctl-lab{font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:1.4px;font-weight:700;width:70px;flex-shrink:0}
-.tog{
-  background:var(--bg3);border:1px solid var(--bd);
-  color:var(--t2);padding:7px 14px;border-radius:20px;
-  font-family:'Noto Sans',sans-serif;font-size:12px;font-weight:600;
-  cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:6px;
+.fgroup{margin-bottom:16px}
+.fgroup:last-child{margin-bottom:0}
+.fgroup-l{
+  font-size:10px;
+  color:var(--t3);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:800;
+  margin-bottom:10px;
 }
-.tog:hover{border-color:var(--blue);color:var(--blue-3);background:var(--bg2)}
-.tog.on{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:var(--shadow-blue)}
-.tog.on .c{color:rgba(255,255,255,.7)}
-.tog .c{font-size:10px;opacity:.65;font-variant-numeric:tabular-nums;color:var(--t3)}
+.fpills{display:flex;gap:8px;flex-wrap:wrap}
+.fpills.sub{margin-top:10px;padding-top:10px;border-top:1px dashed var(--bd)}
+.pill{
+  background:var(--bg3);
+  border:1.5px solid var(--bd);
+  color:var(--t2);
+  padding:10px 18px;
+  border-radius:22px;
+  font-family:'Noto Sans',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  transition:all .15s;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  min-height:42px;
+}
+.pill:hover{border-color:var(--blue);color:var(--blue-3);background:var(--bg2)}
+.pill.on{
+  background:var(--blue);
+  border-color:var(--blue);
+  color:#fff;
+  box-shadow:var(--shadow-blue);
+}
+.pill.on .c{color:rgba(255,255,255,.8)}
+.pill .c{
+  font-size:11px;
+  opacity:.65;
+  font-variant-numeric:tabular-nums;
+  color:var(--t3);
+  font-weight:700;
+}
+.pill.tab{
+  padding:11px 22px;
+  font-size:13px;
+  letter-spacing:.5px;
+  font-weight:800;
+}
+.pill.tab.on{background:var(--blue-3);border-color:var(--blue-3)}
+.pill.market.on{background:var(--green);border-color:var(--green);box-shadow:0 6px 16px rgba(60,172,59,.30)}
+.pill.phase.on{background:var(--red);border-color:var(--red);box-shadow:0 6px 16px rgba(230,29,37,.30)}
+
+/* ===== DAY GROUPS ===== */
+.day-group{margin-bottom:26px;animation:fadeUp .35s ease both}
+.day-hdr{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 18px;
+  background:var(--bg2);
+  border:1px solid var(--bd);
+  border-left:5px solid var(--blue);
+  border-radius:12px;
+  margin-bottom:10px;
+  box-shadow:var(--shadow-sm);
+  flex-wrap:wrap;
+}
+.day-hdr .day-n{
+  font-size:20px;
+  font-weight:900;
+  color:var(--blue-3);
+  letter-spacing:-.3px;
+  line-height:1;
+}
+.day-hdr .day-d{
+  font-size:13px;
+  color:var(--t2);
+  font-weight:600;
+}
+.day-hdr .day-stats{
+  margin-left:auto;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+  font-weight:800;
+  font-variant-numeric:tabular-nums;
+  flex-wrap:wrap;
+}
+.day-hdr .day-chip{
+  display:inline-flex;
+  align-items:center;
+  padding:4px 10px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.day-hdr .day-chip.green{background:var(--green-bg);color:var(--green-3);border:1px solid var(--green-bd)}
+.day-hdr .day-chip.red{background:var(--red-bg);color:var(--red-3);border:1px solid var(--red-bd)}
+.day-hdr .day-chip.blue{background:var(--blue-bg);color:var(--blue-3);border:1px solid var(--blue-bd)}
 
 /* ===== BETS ===== */
-.day-group{margin-bottom:22px;animation:fadeUp .35s ease both}
-.day-hdr{display:flex;align-items:baseline;gap:14px;padding:8px 4px 14px;border-bottom:1px solid var(--bd);margin-bottom:12px}
-.day-hdr .day-n{font-size:22px;font-weight:900;color:var(--blue-3);letter-spacing:-.5px;line-height:1}
-.day-hdr .day-d{font-size:12px;color:var(--t2);font-weight:500}
-.day-hdr .day-stats{margin-left:auto;font-size:11px;font-weight:600;font-variant-numeric:tabular-nums}
 .bet{
-  background:var(--bg2);border:1px solid var(--bd);
-  border-left-width:4px;border-radius:10px;
-  padding:13px 16px;margin-bottom:8px;cursor:pointer;
+  background:var(--bg2);
+  border:1px solid var(--bd);
+  border-left-width:5px;
+  border-radius:11px;
+  padding:14px 18px;
+  margin-bottom:10px;
+  cursor:pointer;
   box-shadow:var(--shadow-sm);
-  transition:background .14s,border-color .14s,box-shadow .14s;
+  transition:background .14s,box-shadow .14s,transform .14s;
 }
-.bet:hover{box-shadow:var(--shadow);background:var(--bg3)}
+.bet:hover{box-shadow:var(--shadow);background:var(--bg2);transform:translateX(2px)}
 .bet.won{border-left-color:var(--green)}
 .bet.lost{border-left-color:var(--red)}
 .bet.pending{border-left-color:var(--blue)}
 .bet.void{border-left-color:var(--t4)}
-.bet-main{display:flex;align-items:center;gap:12px}
+.bet-main{display:flex;align-items:center;gap:14px}
 .bet-info{flex:1;min-width:0}
-.bet-top{font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--tx-h)}
-.bet-top .vs{color:var(--t3);font-weight:400;margin:0 2px}
-.bet-top .sub{color:var(--t2);font-weight:400}
-.bet-top .flag{font-size:16px;line-height:1}
-.market-tag{font-size:9px;font-weight:800;padding:3px 9px;border-radius:5px;text-transform:uppercase;letter-spacing:1px}
-.market-tag.h2h{background:var(--blue-bg);border:1px solid var(--blue-bd);color:var(--blue-3)}
-.market-tag.ou{background:var(--green-bg);border:1px solid var(--green-bd);color:var(--green-3)}
-.market-tag.alt{background:var(--gold-bg);border:1px solid var(--gold-bd);color:#8e7218}
-.market-tag.btts{background:var(--red-bg);border:1px solid var(--red-bd);color:var(--red-3)}
-.market-tag.other{background:var(--bg4);border:1px solid var(--bd2);color:var(--t2)}
-.bet-meta{font-size:11px;color:var(--t2);margin-top:5px;font-variant-numeric:tabular-nums}
-.eh{color:var(--green-3);font-weight:700}.em{color:#8e7218;font-weight:700}.el{color:var(--t2)}
-.actual{color:var(--blue-3);font-weight:700}
-.badge{padding:4px 11px;border-radius:6px;font-size:10px;font-weight:800;letter-spacing:1px;flex-shrink:0}
-.badge.won{background:var(--green-bg);color:var(--green-3);border:1px solid var(--green-bd)}
-.badge.lost{background:var(--red-bg);color:var(--red-3);border:1px solid var(--red-bd)}
-.badge.pending{background:var(--blue-bg);color:var(--blue-3);border:1px solid var(--blue-bd)}
-.badge.void{background:var(--bg4);color:var(--t2);border:1px solid var(--bd2)}
-.chev{color:var(--t3);font-size:11px;transition:transform .2s;flex-shrink:0}
+.bet-top{font-size:15px;font-weight:700;display:flex;align-items:center;gap:9px;flex-wrap:wrap;color:var(--tx-h)}
+.bet-top .vs{color:var(--t3);font-weight:500;margin:0 3px}
+.bet-top .sub{color:var(--t2);font-weight:500;font-size:13px}
+.bet-top .flag{
+  display:inline-block;
+  width:22px;
+  height:16px;
+  vertical-align:middle;
+  border-radius:2px;
+  box-shadow:0 0 0 1px rgba(0,0,0,.08);
+  margin-right:4px;
+  object-fit:cover;
+}
+.market-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-size:10.5px;
+  font-weight:800;
+  padding:5px 10px;
+  border-radius:6px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.market-tag .ico{font-size:13px;line-height:1}
+.market-tag.h2h{background:var(--blue-bg);border:1.5px solid var(--blue-bd);color:var(--blue-3)}
+.market-tag.ou{background:var(--green-bg);border:1.5px solid var(--green-bd);color:var(--green-3)}
+.market-tag.alt{background:var(--gold-bg);border:1.5px solid var(--gold-bd);color:var(--gold-3)}
+.market-tag.btts{background:var(--red-bg);border:1.5px solid var(--red-bd);color:var(--red-3)}
+.market-tag.other{background:var(--bg4);border:1.5px solid var(--bd2);color:var(--t2)}
+.bet-meta{
+  font-size:12.5px;
+  color:var(--t2);
+  margin-top:7px;
+  font-variant-numeric:tabular-nums;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.bet-meta .odds{
+  font-weight:700;
+  color:var(--tx-h);
+}
+.bet-meta .edge-pill{
+  display:inline-flex;
+  align-items:center;
+  padding:3px 10px;
+  border-radius:5px;
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:.3px;
+}
+.bet-meta .edge-pill.eh{background:var(--green-bg);color:var(--green-3);border:1px solid var(--green-bd)}
+.bet-meta .edge-pill.em{background:var(--gold-bg);color:var(--gold-3);border:1px solid var(--gold-bd)}
+.bet-meta .edge-pill.el{background:var(--bg4);color:var(--t2);border:1px solid var(--bd)}
+.bet-meta .sep{color:var(--t4)}
+.bet-meta .actual{color:var(--blue-3);font-weight:700}
+.badge{
+  padding:7px 14px;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+  flex-shrink:0;
+  min-width:74px;
+  text-align:center;
+}
+.badge.won{background:var(--green);color:#fff;box-shadow:0 4px 10px rgba(60,172,59,.30)}
+.badge.lost{background:var(--red);color:#fff;box-shadow:0 4px 10px rgba(230,29,37,.30)}
+.badge.pending{background:var(--blue);color:#fff;box-shadow:0 4px 10px rgba(42,57,141,.30)}
+.badge.void{background:var(--t4);color:#fff}
+.chev{color:var(--t3);font-size:13px;transition:transform .2s;flex-shrink:0;font-weight:700}
 .bet.exp .chev{transform:rotate(90deg);color:var(--blue)}
 .detail{max-height:0;overflow:hidden;opacity:0;transition:max-height .28s ease,opacity .25s ease}
-.bet.exp .detail{max-height:380px;opacity:1;margin-top:14px;transition:max-height .3s ease,opacity .25s ease .05s}
-.dgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding-top:14px;border-top:1px dashed var(--bd2)}
-.dcell{background:var(--bg3);border-radius:8px;padding:9px 11px;border:1px solid var(--bd)}
-.dcell .dl{font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:4px}
-.dcell .dv{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--tx-h)}
+.bet.exp .detail{max-height:420px;opacity:1;margin-top:14px;transition:max-height .3s ease,opacity .25s ease .05s}
+.dgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;padding-top:14px;border-top:1.5px dashed var(--bd2)}
+.dcell{background:var(--bg3);border-radius:9px;padding:11px 12px;border:1px solid var(--bd)}
+.dcell .dl{font-size:9.5px;color:var(--t3);text-transform:uppercase;letter-spacing:1.2px;font-weight:800;margin-bottom:5px}
+.dcell .dv{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--tx-h)}
 
-/* ===== EMPTY STATE (only if even fallback bets fail to load) ===== */
-.empty{text-align:center;padding:80px 24px 70px;background:var(--bg2);border:1px solid var(--bd);border-radius:16px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+/* ===== EMPTY STATES ===== */
+.empty{text-align:center;padding:80px 24px 70px;background:var(--bg2);border:1.5px solid var(--bd);border-radius:16px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.empty.filter-empty{padding:50px 24px}
 .empty::before{content:'';position:absolute;top:-30%;right:-15%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,var(--gold-bg),transparent 65%);pointer-events:none}
 .empty .em-trophy{font-size:64px;margin-bottom:14px;position:relative}
 .empty .em-title{font-size:24px;font-weight:900;color:var(--blue-3);letter-spacing:-.5px;margin-bottom:10px;position:relative}
-.empty .em-sub{font-size:14px;color:var(--t2);font-weight:400;max-width:440px;margin:0 auto;line-height:1.55;position:relative}
-.empty .em-date{margin-top:22px;display:inline-block;padding:11px 22px;border:1px solid var(--gold-bd);border-radius:10px;font-weight:800;letter-spacing:1.5px;color:#9a7c1f;font-size:12px;position:relative;background:var(--gold-bg)}
+.empty .em-sub{font-size:14px;color:var(--t2);font-weight:500;max-width:460px;margin:0 auto;line-height:1.55;position:relative}
+.empty .em-date{margin-top:22px;display:inline-block;padding:12px 22px;border:1.5px solid var(--gold-bd);border-radius:10px;font-weight:800;letter-spacing:1.5px;color:var(--gold-3);font-size:12px;position:relative;background:var(--gold-bg)}
 
 /* ===== FOOTER ===== */
-.footer{text-align:center;padding:38px 20px 12px;color:var(--t3);font-size:11px;letter-spacing:1.2px;font-weight:500}
+.footer{text-align:center;padding:38px 20px 12px;color:var(--t3);font-size:11px;letter-spacing:1.2px;font-weight:600}
 .footer b{color:var(--blue-3);font-weight:800}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -240,19 +385,34 @@ body{
   .stats{grid-template-columns:repeat(3,1fr)}
   .hdr-26{font-size:130px}
   .hdr-l h1{font-size:36px}
+  .sc .v{font-size:28px}
 }
-@media(max-width:620px){
+@media(max-width:680px){
   .stats{grid-template-columns:repeat(2,1fr)}
-  .wrap{padding:22px 14px 70px}
-  .hdr{flex-direction:column;align-items:flex-start;gap:14px}
+  .wrap{padding:18px 14px 80px}
+  .hdr{flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:20px}
   .hdr-26{font-size:90px;right:-8px}
-  .hdr-l h1{font-size:30px}
+  .hdr-l h1{font-size:32px}
   .dgrid{grid-template-columns:repeat(2,1fr)}
-  .ctl-lab{width:100%}
-  .day-hdr .day-n{font-size:18px}
-  .day-hdr .day-stats{font-size:10px}
-  .bet-top{font-size:13px}
-  .bet-top .flag{font-size:15px}
+  .day-hdr{padding:12px 14px}
+  .day-hdr .day-n{font-size:17px}
+  .day-hdr .day-d{font-size:12px;width:100%;margin-top:2px}
+  .day-hdr .day-stats{font-size:11px;width:100%;margin-left:0;margin-top:4px}
+  .bet{padding:13px 14px}
+  .bet-top{font-size:14px}
+  .badge{padding:6px 11px;font-size:11px;min-width:64px}
+  .pill{padding:11px 16px;font-size:13px;min-height:44px}
+  .pill.tab{padding:12px 18px}
+  .market-tag{font-size:10px;padding:4px 8px}
+  .sc{padding:16px 14px}
+  .sc .v{font-size:24px}
+  .sc .l{font-size:10px;letter-spacing:1.4px}
+  .bet-meta{font-size:12px}
+  .fbar{padding:16px}
+}
+@media(max-width:420px){
+  .stats{grid-template-columns:1fr 1fr}
+  .hdr-l h1{font-size:28px}
 }
 </style>
 </head>
@@ -275,24 +435,35 @@ body{
     <div class="stats" id="stats"></div>
 
     <div class="panel">
-      <div class="pt"><span class="ico">📈</span>P/L Acumulado por día del Mundial <span class="r" id="plR"></span></div>
+      <div class="pt"><span class="ico">📈</span>P/L Acumulado por día <span class="r" id="plR"></span></div>
       <div class="chart" id="plC"><div class="tip" id="plT"></div></div>
     </div>
 
-    <div class="controls">
-      <div class="ctl-row"><span class="ctl-lab">Fase</span><div id="phaseTog"></div></div>
-      <div class="ctl-row"><span class="ctl-lab">Mercado</span><div id="marketTog"></div></div>
-      <div class="ctl-row"><span class="ctl-lab">Día</span><div id="dayTog"></div></div>
+    <!-- FILTER BAR: orden Periodo → Mercado → Fase -->
+    <div class="fbar">
+      <div class="fgroup">
+        <div class="fgroup-l">⏱ Periodo</div>
+        <div class="fpills" id="periodTabs"></div>
+        <div class="fpills sub" id="periodSubs" style="display:none"></div>
+      </div>
+      <div class="fgroup">
+        <div class="fgroup-l">🎲 Mercado</div>
+        <div class="fpills" id="marketTog"></div>
+      </div>
+      <div class="fgroup">
+        <div class="fgroup-l">🏟 Fase del torneo</div>
+        <div class="fpills" id="phaseTog"></div>
+      </div>
     </div>
 
     <div id="bets"></div>
   </div>
 
-  <!-- HARD EMPTY STATE (only if fetch fails entirely) -->
+  <!-- HARD EMPTY (sólo si fetch falla y fallback también) -->
   <div id="empty" class="empty" style="display:none">
     <div class="em-trophy">🏆</div>
     <div class="em-title">Aún no hay picks publicadas</div>
-    <div class="em-sub">El bot empieza a generar predicciones cuando el Mundial arranque. Vuelve después del primer partido.</div>
+    <div class="em-sub">El bot empieza a generar predicciones cuando el Mundial arranque.</div>
     <div class="em-date">FIFA WORLD CUP 26 · KICK-OFF 11 JUN</div>
   </div>
 
@@ -303,7 +474,13 @@ body{
 const STAKE = 5;
 let BETS = [];
 let IS_DEMO = false;
-const F = { phase:'all', markets:new Set(), day:'all' };
+const F = {
+  periodMode:'total',  // 'total' | 'day' | 'week'
+  periodDay:null,      // number when periodMode='day'
+  periodWeek:null,     // number when periodMode='week'
+  markets:new Set(),
+  phase:'all',
+};
 const EXPANDED = new Set();
 
 const WC_START = new Date('2026-06-11T00:00:00');
@@ -316,97 +493,91 @@ const PHASE_RANGES = [
   ['Final', '2026-07-12','2026-07-12'],
 ];
 
-/* ===== FLAGS — 48 WC 2026 teams + a few extras ===== */
-const FLAG_MAP = {
-  // WC 2026 — 48 teams (lower-case, normalized variants)
-  'spain':'🇪🇸',
-  'argentina':'🇦🇷',
-  'france':'🇫🇷',
-  'england':'🏴󠁧󠁢󠁥󠁮󠁧󠁿',
-  'brazil':'🇧🇷','brasil':'🇧🇷',
-  'portugal':'🇵🇹',
-  'colombia':'🇨🇴',
-  'netherlands':'🇳🇱','países bajos':'🇳🇱','paises bajos':'🇳🇱','holland':'🇳🇱',
-  'ecuador':'🇪🇨',
-  'croatia':'🇭🇷','croacia':'🇭🇷',
-  'germany':'🇩🇪','alemania':'🇩🇪',
-  'norway':'🇳🇴','noruega':'🇳🇴',
-  'japan':'🇯🇵','japón':'🇯🇵','japon':'🇯🇵',
-  'turkey':'🇹🇷','türkiye':'🇹🇷','turquía':'🇹🇷','turquia':'🇹🇷',
-  'uruguay':'🇺🇾',
-  'switzerland':'🇨🇭','suiza':'🇨🇭',
-  'senegal':'🇸🇳',
-  'belgium':'🇧🇪','bélgica':'🇧🇪','belgica':'🇧🇪',
-  'mexico':'🇲🇽','méxico':'🇲🇽',
-  'paraguay':'🇵🇾',
-  'austria':'🇦🇹',
-  'morocco':'🇲🇦','marruecos':'🇲🇦',
-  'canada':'🇨🇦','canadá':'🇨🇦',
-  'australia':'🇦🇺',
-  'iran':'🇮🇷','irán':'🇮🇷','ir iran':'🇮🇷',
-  'south korea':'🇰🇷','korea republic':'🇰🇷','korea, south':'🇰🇷','corea del sur':'🇰🇷','korea':'🇰🇷',
-  'algeria':'🇩🇿','argelia':'🇩🇿',
-  'panama':'🇵🇦','panamá':'🇵🇦',
-  'uzbekistan':'🇺🇿','uzbekistán':'🇺🇿',
-  'czech republic':'🇨🇿','czech rep.':'🇨🇿','czechia':'🇨🇿','rep. checa':'🇨🇿',
-  'united states':'🇺🇸','usa':'🇺🇸','ee.uu.':'🇺🇸','estados unidos':'🇺🇸',
-  'sweden':'🇸🇪','suecia':'🇸🇪',
-  'jordan':'🇯🇴','jordania':'🇯🇴',
-  'egypt':'🇪🇬','egipto':'🇪🇬',
-  "côte d'ivoire":'🇨🇮',"cote d'ivoire":'🇨🇮','ivory coast':'🇨🇮','c. de marfil':'🇨🇮','costa de marfil':'🇨🇮',
-  'dr congo':'🇨🇩','congo':'🇨🇩','rd congo':'🇨🇩','dem. rep. of congo':'🇨🇩',
-  'tunisia':'🇹🇳','túnez':'🇹🇳','tunez':'🇹🇳',
-  'iraq':'🇮🇶','irak':'🇮🇶',
-  'bosnia':'🇧🇦','bosnia & h.':'🇧🇦','bosnia and herzegovina':'🇧🇦','bosnia y herzegovina':'🇧🇦',
-  'new zealand':'🇳🇿','nueva zelanda':'🇳🇿','n. zelanda':'🇳🇿',
-  'saudi arabia':'🇸🇦','a. saudita':'🇸🇦','arabia saudita':'🇸🇦',
-  'cabo verde':'🇨🇻','cape verde':'🇨🇻',
-  'haiti':'🇭🇹','haití':'🇭🇹',
-  'south africa':'🇿🇦','sudáfrica':'🇿🇦','sudafrica':'🇿🇦',
-  'ghana':'🇬🇭',
-  'scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','escocia':'🏴󠁧󠁢󠁳󠁣󠁴󠁿',
-  'curaçao':'🇨🇼','curacao':'🇨🇼','curazao':'🇨🇼',
-  'qatar':'🇶🇦','catar':'🇶🇦',
-  // useful extras (might appear in mock/non-WC sets)
-  'serbia':'🇷🇸','italy':'🇮🇹','poland':'🇵🇱','wales':'🏴󠁧󠁢󠁷󠁬󠁳󠁿','russia':'🇷🇺',
-  'denmark':'🇩🇰','greece':'🇬🇷','romania':'🇷🇴','ireland':'🇮🇪','peru':'🇵🇪',
-  'chile':'🇨🇱','venezuela':'🇻🇪','bolivia':'🇧🇴','costa rica':'🇨🇷','honduras':'🇭🇳',
-  'jamaica':'🇯🇲','iceland':'🇮🇸','nigeria':'🇳🇬','cameroon':'🇨🇲','ukraine':'🇺🇦',
+/* ===== FLAGS — ISO 2-letter codes for flagcdn.com ===== */
+const FLAG_CODES = {
+  // 48 WC 2026 teams + Spanish aliases
+  'spain':'es','españa':'es',
+  'argentina':'ar',
+  'france':'fr','francia':'fr',
+  'england':'gb-eng','inglaterra':'gb-eng',
+  'brazil':'br','brasil':'br',
+  'portugal':'pt',
+  'colombia':'co',
+  'netherlands':'nl','países bajos':'nl','paises bajos':'nl','holland':'nl',
+  'ecuador':'ec',
+  'croatia':'hr','croacia':'hr',
+  'germany':'de','alemania':'de',
+  'norway':'no','noruega':'no',
+  'japan':'jp','japón':'jp','japon':'jp',
+  'turkey':'tr','türkiye':'tr','turquía':'tr','turquia':'tr',
+  'uruguay':'uy',
+  'switzerland':'ch','suiza':'ch',
+  'senegal':'sn',
+  'belgium':'be','bélgica':'be','belgica':'be',
+  'mexico':'mx','méxico':'mx',
+  'paraguay':'py',
+  'austria':'at',
+  'morocco':'ma','marruecos':'ma',
+  'canada':'ca','canadá':'ca',
+  'australia':'au',
+  'iran':'ir','irán':'ir','ir iran':'ir',
+  'south korea':'kr','korea republic':'kr','korea, south':'kr','corea del sur':'kr','korea':'kr',
+  'algeria':'dz','argelia':'dz',
+  'panama':'pa','panamá':'pa',
+  'uzbekistan':'uz','uzbekistán':'uz',
+  'czech republic':'cz','czech rep.':'cz','czechia':'cz','rep. checa':'cz',
+  'united states':'us','usa':'us','ee.uu.':'us','estados unidos':'us',
+  'sweden':'se','suecia':'se',
+  'jordan':'jo','jordania':'jo',
+  'egypt':'eg','egipto':'eg',
+  "côte d'ivoire":'ci',"cote d'ivoire":'ci','ivory coast':'ci','c. de marfil':'ci','costa de marfil':'ci',
+  'dr congo':'cd','congo':'cd','rd congo':'cd','dem. rep. of congo':'cd',
+  'tunisia':'tn','túnez':'tn','tunez':'tn',
+  'iraq':'iq','irak':'iq',
+  'bosnia':'ba','bosnia & h.':'ba','bosnia and herzegovina':'ba','bosnia y herzegovina':'ba',
+  'new zealand':'nz','nueva zelanda':'nz','n. zelanda':'nz',
+  'saudi arabia':'sa','a. saudita':'sa','arabia saudita':'sa',
+  'cabo verde':'cv','cape verde':'cv',
+  'haiti':'ht','haití':'ht',
+  'south africa':'za','sudáfrica':'za','sudafrica':'za',
+  'ghana':'gh',
+  'scotland':'gb-sct','escocia':'gb-sct',
+  'curaçao':'cw','curacao':'cw','curazao':'cw',
+  'qatar':'qa','catar':'qa',
+  // extras (mock data / non-WC)
+  'serbia':'rs','italy':'it','poland':'pl','wales':'gb-wls','russia':'ru',
+  'denmark':'dk','greece':'gr','romania':'ro','ireland':'ie','peru':'pe',
+  'chile':'cl','venezuela':'ve','bolivia':'bo','costa rica':'cr','honduras':'hn',
+  'jamaica':'jm','iceland':'is','nigeria':'ng','cameroon':'cm','ukraine':'ua',
 };
 
-function flagFor(name){
+function flagImg(name){
   if(!name) return '';
-  return FLAG_MAP[name.trim().toLowerCase()] || '';
-}
-
-function teamWithFlag(name){
-  const f = flagFor(name);
-  return f ? `<span class="flag">${f}</span> ${name}` : name;
+  const code = FLAG_CODES[name.trim().toLowerCase()];
+  if(!code) return '';
+  return `<img class="flag" src="https://flagcdn.com/24x18/${code}.png" srcset="https://flagcdn.com/48x36/${code}.png 2x" width="22" height="16" alt="${name}" loading="lazy">`;
 }
 
 function formatTeamMatch(playerName){
   if(!playerName) return '';
   if(!playerName.includes('@')) return playerName;
   const parts = playerName.split('@').map(s=>s.trim());
-  return `${teamWithFlag(parts[0])} <span class="vs">@</span> ${teamWithFlag(parts[1])}`;
+  const a = parts[0], b = parts[1];
+  return `${flagImg(a)}<span>${a}</span><span class="vs">@</span>${flagImg(b)}<span>${b}</span>`;
 }
+
+/* ===== MARKET ICONS ===== */
+const MARKET_ICON = {
+  'H2H':'🏆',
+  'O/U Main':'⚽',
+  'Alt Totals':'📊',
+  'BTTS':'🎯',
+  'Other':'•',
+};
 
 /* ===== FALLBACK BETS (preview when wc_data.json is empty) ===== */
 const FALLBACK_BETS = [
-  // Brasil @ Serbia — Day 6 (Jun 16)
-  {player_name:'Serbia @ Brazil', prop_type:'Goals Over 2.5', line:2.5, odds_american:'+105',
-   status:'won', edge:0.12, real_prob:0.58, prob_model_raw:0.62, implied_prob:0.487,
-   event:'Serbia @ Brazil', commence_time:'Jun 16, 06:00 PM', sport:'soccer_wc2026',
-   tier:'A', market_key:'totals', elo_home:1984, elo_away:1700, engine:'dixon_coles',
-   kelly_bet:4.68, potential_win:4.91,
-   recorded_at:'2026-06-14T10:00:00', graded_at:'2026-06-16T20:30:00', actual_stat:3},
-  {player_name:'Serbia @ Brazil', prop_type:'BTTS Yes', line:0, odds_american:'-105',
-   status:'lost', edge:0.05, real_prob:0.55, prob_model_raw:0.60, implied_prob:0.512,
-   event:'Serbia @ Brazil', commence_time:'Jun 16, 06:00 PM', sport:'soccer_wc2026',
-   tier:'B', market_key:'btts', elo_home:1984, elo_away:1700, engine:'dixon_coles',
-   kelly_bet:3.0, potential_win:2.86,
-   recorded_at:'2026-06-14T10:00:00', graded_at:'2026-06-16T20:30:00', actual_stat:'3-0'},
-  // Mexico @ Canada — Day 1 opener (Jun 11)
+  // Day 1 — Jun 11 (Mexico opener)
   {player_name:'Canada @ Mexico', prop_type:'Goals Under 2.5', line:2.5, odds_american:'-110',
    status:'won', edge:0.10, real_prob:0.62, prob_model_raw:0.67, implied_prob:0.524,
    event:'Canada @ Mexico', commence_time:'Jun 11, 08:00 PM', sport:'soccer_wc2026',
@@ -419,7 +590,7 @@ const FALLBACK_BETS = [
    tier:'B', market_key:'h2h', elo_home:1858, elo_away:1784, engine:'dixon_coles',
    kelly_bet:3.5, potential_win:2.69,
    recorded_at:'2026-06-10T10:00:00', graded_at:'2026-06-11T22:30:00', actual_stat:'1-0'},
-  // England @ USA — Day 4 (Jun 14)
+  // Day 4 — Jun 14
   {player_name:'England @ USA', prop_type:'Goals Over 1.5', line:1.5, odds_american:'-180',
    status:'won', edge:0.07, real_prob:0.78, prob_model_raw:0.83, implied_prob:0.643,
    event:'England @ USA', commence_time:'Jun 14, 03:00 PM', sport:'soccer_wc2026',
@@ -432,7 +603,20 @@ const FALLBACK_BETS = [
    tier:'A', market_key:'btts', elo_home:1721, elo_away:2020, engine:'dixon_coles',
    kelly_bet:4.68, potential_win:4.68,
    recorded_at:'2026-06-12T10:00:00', graded_at:'2026-06-14T17:30:00', actual_stat:'2-1'},
-  // Argentina @ Australia — Day 10 (Jun 20), pending
+  // Day 6 — Jun 16
+  {player_name:'Serbia @ Brazil', prop_type:'Goals Over 2.5', line:2.5, odds_american:'+105',
+   status:'won', edge:0.12, real_prob:0.58, prob_model_raw:0.62, implied_prob:0.487,
+   event:'Serbia @ Brazil', commence_time:'Jun 16, 06:00 PM', sport:'soccer_wc2026',
+   tier:'A', market_key:'totals', elo_home:1984, elo_away:1700, engine:'dixon_coles',
+   kelly_bet:4.68, potential_win:4.91,
+   recorded_at:'2026-06-14T10:00:00', graded_at:'2026-06-16T20:30:00', actual_stat:3},
+  {player_name:'Serbia @ Brazil', prop_type:'BTTS Yes', line:0, odds_american:'-105',
+   status:'lost', edge:0.05, real_prob:0.55, prob_model_raw:0.60, implied_prob:0.512,
+   event:'Serbia @ Brazil', commence_time:'Jun 16, 06:00 PM', sport:'soccer_wc2026',
+   tier:'B', market_key:'btts', elo_home:1984, elo_away:1700, engine:'dixon_coles',
+   kelly_bet:3.0, potential_win:2.86,
+   recorded_at:'2026-06-14T10:00:00', graded_at:'2026-06-16T20:30:00', actual_stat:'3-0'},
+  // Day 10 — Jun 20 pending
   {player_name:'Australia @ Argentina', prop_type:'Goals Over 3.5', line:3.5, odds_american:'+135',
    status:'pending', edge:0.11, real_prob:0.49, prob_model_raw:0.54, implied_prob:0.425,
    event:'Australia @ Argentina', commence_time:'Jun 20, 06:00 PM', sport:'soccer_wc2026',
@@ -451,14 +635,17 @@ function calcPL(b){
 function parseISO(s){if(!s)return null;try{const d=new Date(s);return isNaN(d)?null:d;}catch{return null;}}
 function commenceDate(b){
   const ct = b.commence_time||'';
-  const iso = parseISO(ct);
-  if(iso) return iso;
+  // Bot format first ("Jun 11, 08:00 PM" — no year). new Date() of this
+  // string parses to year 1900 silently, so we must check the regex BEFORE
+  // falling back to ISO parsing.
   const m = ct.match(/^(\w+)\s+(\d+),\s+(\d+):(\d+)\s+(AM|PM)$/);
   if(m){
     const months={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
     let h=parseInt(m[3]); if(m[5]==='PM'&&h<12)h+=12; if(m[5]==='AM'&&h===12)h=0;
     return new Date(2026, months[m[1]]||0, parseInt(m[2]), h, parseInt(m[4]));
   }
+  const iso = parseISO(ct);
+  if(iso) return iso;
   return parseISO(b.recorded_at);
 }
 function dayNum(b){
@@ -468,6 +655,11 @@ function dayNum(b){
   const cur   = new Date(d.getFullYear(),       d.getMonth(),       d.getDate());
   const diff  = Math.round((cur - start) / 86400000);
   return diff + 1;
+}
+function weekNum(b){
+  const dn = dayNum(b);
+  if(dn == null) return null;
+  return Math.ceil(dn/7);
 }
 function phaseOf(b){
   const d = commenceDate(b);
@@ -505,13 +697,22 @@ function mkSVG(el,w,h){
 }
 function cssv(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
 
+/* ===== FILTER ===== */
+function matchPeriod(b){
+  if(F.periodMode === 'day' && F.periodDay != null){
+    if(dayNum(b) !== F.periodDay) return false;
+  }
+  if(F.periodMode === 'week' && F.periodWeek != null){
+    if(weekNum(b) !== F.periodWeek) return false;
+  }
+  return true;
+}
 function matchFilter(b){
   if(F.phase !== 'all' && phaseOf(b) !== F.phase) return false;
   if(F.markets.size && !F.markets.has(marketOf(b))) return false;
-  if(F.day !== 'all' && String(dayNum(b)) !== String(F.day)) return false;
+  if(!matchPeriod(b)) return false;
   return true;
 }
-
 function fmtPct(x){return x==null?'—':(x*100).toFixed(1)+'%';}
 
 /* ===== STATS ===== */
@@ -524,7 +725,6 @@ function renderStats(){
   const wr = res.length ? w/res.length*100 : 0;
   const pl = res.reduce((s,b)=>s+calcPL(b), 0);
   const roi = res.length ? pl/(res.length*STAKE)*100 : 0;
-
   const sorted = [...res].sort((a,b)=>{
     const da=parseISO(a.graded_at||a.recorded_at), db=parseISO(b.graded_at||b.recorded_at);
     return (!da||!db)?0:da-db;
@@ -535,10 +735,8 @@ function renderStats(){
   }
   const stkTxt = st==='won' ? `${stk}W 🔥` : st==='lost' ? `${stk}L` : '—';
   const stkCol = st==='won' ? 'var(--green-3)' : st==='lost' ? 'var(--red-3)' : 'var(--blue-3)';
-
-  const wCol = wr>=55?'var(--green-3)' : wr>=50?'#8e7218' : 'var(--red-3)';
+  const wCol = wr>=55?'var(--green-3)' : wr>=50?'var(--gold-3)' : 'var(--red-3)';
   const pCol = pl>=0?'var(--green-3)':'var(--red-3)';
-
   const html =
     card('tri', 'Record',   `${w}W-${l}L`,                       `${pend} pending`) +
     card(wr>=55?'green':wr>=50?'':'red', 'Win Rate', `<span style="color:${wCol}">${wr.toFixed(1)}%</span>`, `${res.length} resolved`) +
@@ -549,7 +747,7 @@ function renderStats(){
 }
 function card(cls,l,v,s){return `<div class="sc ${cls}"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div></div>`;}
 
-/* ===== CHART — cumulative by Day (line in WC blue) ===== */
+/* ===== CHART ===== */
 function drawPL(){
   const el = document.getElementById('plC'), tip = document.getElementById('plT');
   el.querySelectorAll('svg').forEach(x=>x.remove());
@@ -570,12 +768,11 @@ function drawPL(){
   });
   const days = Object.values(byDay).sort((a,b)=>a.day-b.day);
   if(!days.length){document.getElementById('plR').textContent='—'; return;}
-
   let cum=0;
   const pts = days.map(d=>{cum+=d.pl; return {x:d.day, y:cum, d:d};});
   document.getElementById('plR').textContent = `Día ${pts[pts.length-1].x} · ${cum>=0?'+':''}$${cum.toFixed(2)}`;
 
-  const W=620,H=210,P={t:24,r:28,b:32,l:54};
+  const W=620,H=220,P={t:24,r:28,b:34,l:54};
   const svg = mkSVG(el, W, H);
   const minY = Math.min(0, ...pts.map(p=>p.y)) - 3;
   const maxY = Math.max(0, ...pts.map(p=>p.y)) + 3;
@@ -584,14 +781,13 @@ function drawPL(){
   const sx = x => ((x-minX)/(maxX-minX||1))*(W-P.l-P.r) + P.l;
   const sy = v => H - P.b - ((v-minY)/rY)*(H-P.t-P.b);
 
-  // grid + labels
   for(let i=0;i<=5;i++){
     const v = minY + rY/5*i, y = sy(v);
     const gl = ns('line'); gl.setAttribute('x1',P.l);gl.setAttribute('x2',W-P.r);gl.setAttribute('y1',y);gl.setAttribute('y2',y);
     gl.setAttribute('stroke','var(--bd)');gl.setAttribute('stroke-width','1');
     svg.appendChild(gl);
     const t = ns('text'); t.setAttribute('x',P.l-8);t.setAttribute('y',y+3);t.setAttribute('text-anchor','end');
-    t.setAttribute('fill','var(--t3)');t.setAttribute('font-size','9');t.setAttribute('font-family','Noto Sans');
+    t.setAttribute('fill','var(--t3)');t.setAttribute('font-size','10');t.setAttribute('font-family','Noto Sans');
     t.textContent=`$${v.toFixed(0)}`;
     svg.appendChild(t);
   }
@@ -599,46 +795,40 @@ function drawPL(){
     const z=ns('line');z.setAttribute('x1',P.l);z.setAttribute('x2',W-P.r);z.setAttribute('y1',sy(0));z.setAttribute('y2',sy(0));
     z.setAttribute('stroke','var(--bd2)');z.setAttribute('stroke-dasharray','4,3');svg.appendChild(z);
   }
-  // gradient (always blue tones; tag color reflects sign)
   const lineCol = cssv('--blue');
   const defs=ns('defs'),g=ns('linearGradient');g.id='wcPL';
   g.setAttribute('x1','0');g.setAttribute('y1','0');g.setAttribute('x2','0');g.setAttribute('y2','1');
-  const s1=ns('stop');s1.setAttribute('offset','0%');s1.setAttribute('stop-color',lineCol);s1.setAttribute('stop-opacity','.22');g.appendChild(s1);
+  const s1=ns('stop');s1.setAttribute('offset','0%');s1.setAttribute('stop-color',lineCol);s1.setAttribute('stop-opacity','.26');g.appendChild(s1);
   const s2=ns('stop');s2.setAttribute('offset','100%');s2.setAttribute('stop-color',lineCol);s2.setAttribute('stop-opacity','0');g.appendChild(s2);
   defs.appendChild(g);svg.appendChild(defs);
   let a = 'M'+sx(pts[0].x)+','+sy(0);
   pts.forEach(p => a += ' L'+sx(p.x)+','+sy(p.y));
   a += ' L'+sx(pts[pts.length-1].x)+','+sy(0)+' Z';
   const ar=ns('path');ar.setAttribute('d',a);ar.setAttribute('fill','url(#wcPL)');svg.appendChild(ar);
-  // line
   let dPath=''; pts.forEach((p,i)=>dPath+=(i?'L':'M')+sx(p.x)+','+sy(p.y));
   const ln=ns('path');ln.setAttribute('d',dPath);ln.setAttribute('fill','none');ln.setAttribute('stroke',lineCol);
-  ln.setAttribute('stroke-width','2.5');ln.setAttribute('stroke-linecap','round');ln.setAttribute('stroke-linejoin','round');svg.appendChild(ln);
-  // dots
+  ln.setAttribute('stroke-width','3');ln.setAttribute('stroke-linecap','round');ln.setAttribute('stroke-linejoin','round');svg.appendChild(ln);
   pts.forEach(p=>{
-    const dot=ns('circle');dot.setAttribute('cx',sx(p.x));dot.setAttribute('cy',sy(p.y));dot.setAttribute('r','4');
-    dot.setAttribute('fill',lineCol);dot.setAttribute('stroke',cssv('--bg2'));dot.setAttribute('stroke-width','2');
+    const dot=ns('circle');dot.setAttribute('cx',sx(p.x));dot.setAttribute('cy',sy(p.y));dot.setAttribute('r','5');
+    dot.setAttribute('fill',lineCol);dot.setAttribute('stroke',cssv('--bg2'));dot.setAttribute('stroke-width','2.5');
     svg.appendChild(dot);
   });
-  // last value tag — color by sign
   const last = pts[pts.length-1];
-  const ltx=ns('text');ltx.setAttribute('x',sx(last.x));ltx.setAttribute('y',sy(last.y)-12);ltx.setAttribute('text-anchor','middle');
+  const ltx=ns('text');ltx.setAttribute('x',sx(last.x));ltx.setAttribute('y',sy(last.y)-14);ltx.setAttribute('text-anchor','middle');
   ltx.setAttribute('fill', cum>=0 ? cssv('--green-3') : cssv('--red-3'));
-  ltx.setAttribute('font-size','12');ltx.setAttribute('font-weight','800');
+  ltx.setAttribute('font-size','13');ltx.setAttribute('font-weight','900');
   ltx.setAttribute('font-family','Noto Sans');
   ltx.textContent=`${cum>=0?'+':''}$${cum.toFixed(2)}`;svg.appendChild(ltx);
-  // x labels
   const step = Math.max(1, Math.ceil(pts.length/8));
   pts.forEach((p,i)=>{
     if(i%step!==0 && i!==pts.length-1) return;
-    const t=ns('text');t.setAttribute('x',sx(p.x));t.setAttribute('y',H-8);t.setAttribute('text-anchor','middle');
-    t.setAttribute('fill','var(--t3)');t.setAttribute('font-size','9');t.setAttribute('font-family','Noto Sans');
+    const t=ns('text');t.setAttribute('x',sx(p.x));t.setAttribute('y',H-10);t.setAttribute('text-anchor','middle');
+    t.setAttribute('fill','var(--t3)');t.setAttribute('font-size','10');t.setAttribute('font-family','Noto Sans');t.setAttribute('font-weight','600');
     t.textContent=`D${p.x}`;svg.appendChild(t);
   });
-  // hover
   const hw = (W-P.l-P.r)/(pts.length||1);
   const hl=ns('line');hl.setAttribute('y1',P.t);hl.setAttribute('y2',H-P.b);hl.setAttribute('stroke',cssv('--blue'));hl.setAttribute('stroke-dasharray','3,3');hl.style.opacity='0';svg.appendChild(hl);
-  const hd=ns('circle');hd.setAttribute('r','5');hd.setAttribute('fill',cssv('--blue'));hd.style.opacity='0';svg.appendChild(hd);
+  const hd=ns('circle');hd.setAttribute('r','6');hd.setAttribute('fill',cssv('--blue'));hd.style.opacity='0';svg.appendChild(hd);
   pts.forEach((p,i)=>{
     const r=ns('rect');r.setAttribute('x',sx(p.x)-hw/2);r.setAttribute('y',P.t);r.setAttribute('width',hw);r.setAttribute('height',H-P.t-P.b);r.setAttribute('fill','transparent');r.style.cursor='crosshair';
     r.addEventListener('mouseenter',()=>{
@@ -654,26 +844,56 @@ function drawPL(){
   });
 }
 
-/* ===== CONTROLS ===== */
-function renderControls(){
-  const phases = ['Groups','R16','QF','SF','3rd','Final'];
-  document.getElementById('phaseTog').innerHTML =
-    `<button class="tog ${F.phase==='all'?'on':''}" data-phase="all">Todas</button>` +
-    phases.map(p=>{
-      const n = BETS.filter(b=>phaseOf(b)===p).length;
-      return `<button class="tog ${F.phase===p?'on':''}" data-phase="${p}">${p}${n?` <span class="c">${n}</span>`:''}</button>`;
-    }).join('');
+/* ===== FILTERS UI ===== */
+function renderFilters(){
+  // PERIODO
+  const tabs = [
+    {key:'total', label:'Total'},
+    {key:'day',   label:'Por Día'},
+    {key:'week',  label:'Por Semana'},
+  ];
+  document.getElementById('periodTabs').innerHTML = tabs.map(t=>
+    `<button class="pill tab ${F.periodMode===t.key?'on':''}" data-pmode="${t.key}">${t.label}</button>`
+  ).join('');
+
+  // Sub-pills (Día N or Sem N)
+  const sub = document.getElementById('periodSubs');
+  if(F.periodMode === 'day'){
+    sub.style.display = 'flex';
+    const days = [...new Set(BETS.map(dayNum).filter(d=>d!=null))].sort((a,b)=>a-b);
+    sub.innerHTML = `<button class="pill ${F.periodDay==null?'on':''}" data-pday="all">Todos los días</button>` +
+      days.map(d=>{
+        const n = BETS.filter(b=>dayNum(b)===d).length;
+        return `<button class="pill ${F.periodDay===d?'on':''}" data-pday="${d}">D${d}${n?` <span class="c">${n}</span>`:''}</button>`;
+      }).join('');
+  } else if(F.periodMode === 'week'){
+    sub.style.display = 'flex';
+    const weeks = [...new Set(BETS.map(weekNum).filter(w=>w!=null))].sort((a,b)=>a-b);
+    sub.innerHTML = `<button class="pill ${F.periodWeek==null?'on':''}" data-pweek="all">Todas las semanas</button>` +
+      weeks.map(w=>{
+        const n = BETS.filter(b=>weekNum(b)===w).length;
+        return `<button class="pill ${F.periodWeek===w?'on':''}" data-pweek="${w}">Sem ${w}${n?` <span class="c">${n}</span>`:''}</button>`;
+      }).join('');
+  } else {
+    sub.style.display = 'none';
+    sub.innerHTML = '';
+  }
+
+  // MERCADOS (multi)
   const markets = ['H2H','O/U Main','Alt Totals','BTTS'];
   document.getElementById('marketTog').innerHTML = markets.map(m=>{
     const n = BETS.filter(b=>marketOf(b)===m).length;
-    return `<button class="tog ${F.markets.has(m)?'on':''}" data-market="${m}">${m}${n?` <span class="c">${n}</span>`:''}</button>`;
+    const icon = MARKET_ICON[m] || '';
+    return `<button class="pill market ${F.markets.has(m)?'on':''}" data-market="${m}"><span>${icon}</span> ${m}${n?` <span class="c">${n}</span>`:''}</button>`;
   }).join('');
-  const days = [...new Set(BETS.map(dayNum).filter(d=>d!=null))].sort((a,b)=>a-b);
-  document.getElementById('dayTog').innerHTML =
-    `<button class="tog ${F.day==='all'?'on':''}" data-day="all">Todos</button>` +
-    days.map(d=>{
-      const n = BETS.filter(b=>dayNum(b)===d).length;
-      return `<button class="tog ${String(F.day)===String(d)?'on':''}" data-day="${d}">D${d}${n?` <span class="c">${n}</span>`:''}</button>`;
+
+  // FASE
+  const phases = ['Groups','R16','QF','SF','3rd','Final'];
+  document.getElementById('phaseTog').innerHTML =
+    `<button class="pill phase ${F.phase==='all'?'on':''}" data-phase="all">Todas</button>` +
+    phases.map(p=>{
+      const n = BETS.filter(b=>phaseOf(b)===p).length;
+      return `<button class="pill phase ${F.phase===p?'on':''}" data-phase="${p}">${p}${n?` <span class="c">${n}</span>`:''}</button>`;
     }).join('');
 }
 
@@ -682,7 +902,11 @@ function renderBets(){
   const fb = BETS.filter(matchFilter);
   const cont = document.getElementById('bets');
   if(!fb.length){
-    cont.innerHTML = '<div class="empty" style="margin-top:0;padding:50px 24px"><div class="em-sub">Sin picks que coincidan con estos filtros.</div></div>';
+    cont.innerHTML = `<div class="empty filter-empty">
+        <div style="font-size:42px;margin-bottom:12px;opacity:.5">🔍</div>
+        <div class="em-title" style="font-size:18px">No hay picks para este periodo</div>
+        <div class="em-sub" style="margin-top:6px">Probá cambiar los filtros o seleccionar otro día/semana.</div>
+      </div>`;
     return;
   }
   const byDay = {};
@@ -704,22 +928,24 @@ function renderBets(){
     const gl = g.bets.filter(b=>b.status==='lost').length;
     const gp = g.bets.filter(b=>b.status==='pending').length;
     const gPL = g.bets.reduce((s,b)=>s+calcPL(b),0);
-    const recCol = gw>gl?'var(--green-3)':gw===gl?'var(--blue-3)':'var(--red-3)';
-    let stats = '';
+    const recColCls = gw>gl?'green':gw===gl?'blue':'red';
+    let chips = '';
     if(gw+gl){
-      stats = `<span style="color:${recCol}">${gw}W-${gl}L</span>` +
-              (gp ? ` · <span style="color:var(--blue-3)">${gp} pend</span>` : '') +
-              ` · <span style="color:${gPL>=0?'var(--green-3)':'var(--red-3)'}">${gPL>=0?'+':''}$${gPL.toFixed(2)}</span>`;
-    } else if(gp) {
-      stats = `<span style="color:var(--blue-3)">${gp} pending</span>`;
+      chips += `<span class="day-chip ${recColCls}">${gw}W-${gl}L</span>`;
+      chips += `<span class="day-chip ${gPL>=0?'green':'red'}">${gPL>=0?'+':''}$${gPL.toFixed(2)}</span>`;
+    }
+    if(gp){
+      chips += `<span class="day-chip blue">${gp} PEND</span>`;
     }
     const dLabel = g.date ? dateLabel(g.date) : '';
-    const dayLabel = g.day != null ? `Día ${g.day}` : 'Sin fecha';
+    const dayLabel = g.day != null ? `DÍA ${g.day}` : 'SIN FECHA';
     html += `<div class="day-group" style="animation-delay:${Math.min(gi*.04,.4)}s">`
-         + `<div class="day-hdr"><div class="day-n">${dayLabel}</div><div class="day-d">${dLabel}</div><div class="day-stats">${stats}</div></div>`;
+         + `<div class="day-hdr"><div class="day-n">${dayLabel}</div><div class="day-d">${dLabel}</div><div class="day-stats">${chips}</div></div>`;
+    // sort by commence time ASC within day (earliest first)
     g.bets.sort((a,b)=>{
-      if((a.status==='pending')!==(b.status==='pending')) return a.status==='pending'?-1:1;
-      return (b.edge||0)-(a.edge||0);
+      const da = commenceDate(a), db = commenceDate(b);
+      if(da && db) return da - db;
+      return 0;
     });
     g.bets.forEach(b=>{
       const sc = b.status||'pending';
@@ -727,13 +953,14 @@ function renderBets(){
       const ec = b.edge>=.15?'eh':b.edge>=.08?'em':'el';
       const mk = marketOf(b);
       const mcls = marketClass(mk);
-      const act = (b.actual_stat!==undefined && b.actual_stat!==null) ? ` · Result <span class="actual">${b.actual_stat}</span>` : '';
+      const ico = MARKET_ICON[mk] || '';
+      const act = (b.actual_stat!==undefined && b.actual_stat!==null) ? ` <span class="sep">·</span> Result <span class="actual">${b.actual_stat}</span>` : '';
       const exp = EXPANDED.has(b._id) ? ' exp' : '';
-      const eloLine = (b.elo_home && b.elo_away) ? ` · Elo ${b.elo_home}-${b.elo_away}` : '';
+      const eloLine = (b.elo_home && b.elo_away) ? ` <span class="sep">·</span> Elo ${b.elo_home}-${b.elo_away}` : '';
       html += `<div class="bet ${sc}${exp}" data-bet="${b._id}">`
            + `<div class="bet-main"><div class="bet-info">`
-           + `<div class="bet-top"><span class="market-tag ${mcls}">${mk}</span><span>${formatTeamMatch(b.player_name)}</span><span class="sub">· ${b.prop_type}</span></div>`
-           + `<div class="bet-meta">${b.odds_american} · Edge <span class="${ec}">${ep}%</span>${eloLine}${act}</div>`
+           + `<div class="bet-top"><span class="market-tag ${mcls}"><span class="ico">${ico}</span>${mk}</span>${formatTeamMatch(b.player_name)}<span class="sub">· ${b.prop_type}</span></div>`
+           + `<div class="bet-meta"><span class="odds">${b.odds_american}</span> <span class="sep">·</span> <span class="edge-pill ${ec}">Edge ${ep}%</span>${eloLine}${act}</div>`
            + `</div><span class="badge ${sc}">${sc.toUpperCase()}</span><span class="chev">▶</span></div>`
            + detailHTML(b)
            + `</div>`;
@@ -774,19 +1001,39 @@ function render(){
   meta.innerHTML = `WORLD CUP 26 · ${BETS.length} ${IS_DEMO?'picks de ejemplo':'picks'} · ${new Date().toLocaleDateString('es-AR')}${demoTag}`;
   renderStats();
   drawPL();
-  renderControls();
+  renderFilters();
   renderBets();
 }
 
 document.addEventListener('click', e=>{
-  const ph = e.target.closest('[data-phase]'); if(ph){F.phase = ph.dataset.phase; render(); return;}
-  const mk = e.target.closest('[data-market]'); if(mk){
+  // period mode tabs
+  const pm = e.target.closest('[data-pmode]');
+  if(pm){
+    F.periodMode = pm.dataset.pmode;
+    if(F.periodMode !== 'day')  F.periodDay = null;
+    if(F.periodMode !== 'week') F.periodWeek = null;
+    render(); return;
+  }
+  const pd = e.target.closest('[data-pday]');
+  if(pd){
+    F.periodDay = pd.dataset.pday === 'all' ? null : +pd.dataset.pday;
+    render(); return;
+  }
+  const pw = e.target.closest('[data-pweek]');
+  if(pw){
+    F.periodWeek = pw.dataset.pweek === 'all' ? null : +pw.dataset.pweek;
+    render(); return;
+  }
+  const mk = e.target.closest('[data-market]');
+  if(mk){
     const v = mk.dataset.market;
     if(F.markets.has(v)) F.markets.delete(v); else F.markets.add(v);
     render(); return;
   }
-  const dy = e.target.closest('[data-day]'); if(dy){F.day = dy.dataset.day; render(); return;}
-  const bet = e.target.closest('[data-bet]'); if(bet){
+  const ph = e.target.closest('[data-phase]');
+  if(ph){F.phase = ph.dataset.phase; render(); return;}
+  const bet = e.target.closest('[data-bet]');
+  if(bet){
     const id = +bet.dataset.bet;
     if(EXPANDED.has(id)) EXPANDED.delete(id); else EXPANDED.add(id);
     bet.classList.toggle('exp');
