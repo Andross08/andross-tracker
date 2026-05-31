@@ -8780,7 +8780,9 @@
     "sport": "soccer_uefa_champs_league",
     "mode": "manual",
     "recorded_at": "2026-05-30T10:44:43.186304",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": "1-1, both scored",
+    "graded_at": "2026-05-31T18:21:04.462861"
   },
   {
     "player_name": "Total Goals",
@@ -8796,6 +8798,8 @@
     "sport": "soccer_uefa_champs_league",
     "mode": "manual",
     "recorded_at": "2026-05-30T10:44:43.186304",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": "2 goals (1-1)",
+    "graded_at": "2026-05-31T18:21:04.462861"
   }
 ]
