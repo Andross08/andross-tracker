@@ -467,7 +467,7 @@ body{
     <div id="bets"></div>
   </div>
 
-  <!-- HARD EMPTY (sólo si fetch falla y fallback también) -->
+  <!-- EMPTY STATE (cuando wc_data.json está vacío o el fetch falla) -->
   <div id="empty" class="empty" style="display:none">
     <div class="em-trophy">🏆</div>
     <div class="em-title">Aún no hay picks publicadas</div>
@@ -582,56 +582,6 @@ const MARKET_ICON = {
   'BTTS':'🎯',
   'Other':'•',
 };
-
-/* ===== FALLBACK BETS (preview when wc_data.json is empty) ===== */
-const FALLBACK_BETS = [
-  // Day 1 — Jun 11 (Mexico opener)
-  {player_name:'Canada @ Mexico', prop_type:'Goals Under 2.5', line:2.5, odds_american:'-110',
-   status:'won', edge:0.10, real_prob:0.62, prob_model_raw:0.67, implied_prob:0.524,
-   event:'Canada @ Mexico', commence_time:'Jun 11, 08:00 PM', sport:'soccer_wc2026',
-   tier:'A', market_key:'totals', elo_home:1858, elo_away:1784, engine:'dixon_coles',
-   kelly_bet:4.5, potential_win:4.09,
-   recorded_at:'2026-06-10T10:00:00', graded_at:'2026-06-11T22:30:00', actual_stat:1},
-  {player_name:'Canada @ Mexico', prop_type:'Win Mexico', line:0, odds_american:'-130',
-   status:'won', edge:0.08, real_prob:0.62, prob_model_raw:0.66, implied_prob:0.565,
-   event:'Canada @ Mexico', commence_time:'Jun 11, 08:00 PM', sport:'soccer_wc2026',
-   tier:'B', market_key:'h2h', elo_home:1858, elo_away:1784, engine:'dixon_coles',
-   kelly_bet:3.5, potential_win:2.69,
-   recorded_at:'2026-06-10T10:00:00', graded_at:'2026-06-11T22:30:00', actual_stat:'1-0'},
-  // Day 4 — Jun 14
-  {player_name:'England @ USA', prop_type:'Goals Over 1.5', line:1.5, odds_american:'-180',
-   status:'won', edge:0.07, real_prob:0.78, prob_model_raw:0.83, implied_prob:0.643,
-   event:'England @ USA', commence_time:'Jun 14, 03:00 PM', sport:'soccer_wc2026',
-   tier:'B', market_key:'totals', elo_home:1721, elo_away:2020, engine:'dixon_coles',
-   kelly_bet:4.0, potential_win:2.22,
-   recorded_at:'2026-06-12T10:00:00', graded_at:'2026-06-14T17:30:00', actual_stat:3},
-  {player_name:'England @ USA', prop_type:'BTTS No', line:0, odds_american:'+100',
-   status:'lost', edge:0.09, real_prob:0.59, prob_model_raw:0.64, implied_prob:0.50,
-   event:'England @ USA', commence_time:'Jun 14, 03:00 PM', sport:'soccer_wc2026',
-   tier:'A', market_key:'btts', elo_home:1721, elo_away:2020, engine:'dixon_coles',
-   kelly_bet:4.68, potential_win:4.68,
-   recorded_at:'2026-06-12T10:00:00', graded_at:'2026-06-14T17:30:00', actual_stat:'2-1'},
-  // Day 6 — Jun 16
-  {player_name:'Serbia @ Brazil', prop_type:'Goals Over 2.5', line:2.5, odds_american:'+105',
-   status:'won', edge:0.12, real_prob:0.58, prob_model_raw:0.62, implied_prob:0.487,
-   event:'Serbia @ Brazil', commence_time:'Jun 16, 06:00 PM', sport:'soccer_wc2026',
-   tier:'A', market_key:'totals', elo_home:1984, elo_away:1700, engine:'dixon_coles',
-   kelly_bet:4.68, potential_win:4.91,
-   recorded_at:'2026-06-14T10:00:00', graded_at:'2026-06-16T20:30:00', actual_stat:3},
-  {player_name:'Serbia @ Brazil', prop_type:'BTTS Yes', line:0, odds_american:'-105',
-   status:'lost', edge:0.05, real_prob:0.55, prob_model_raw:0.60, implied_prob:0.512,
-   event:'Serbia @ Brazil', commence_time:'Jun 16, 06:00 PM', sport:'soccer_wc2026',
-   tier:'B', market_key:'btts', elo_home:1984, elo_away:1700, engine:'dixon_coles',
-   kelly_bet:3.0, potential_win:2.86,
-   recorded_at:'2026-06-14T10:00:00', graded_at:'2026-06-16T20:30:00', actual_stat:'3-0'},
-  // Day 10 — Jun 20 pending
-  {player_name:'Australia @ Argentina', prop_type:'Goals Over 3.5', line:3.5, odds_american:'+135',
-   status:'pending', edge:0.11, real_prob:0.49, prob_model_raw:0.54, implied_prob:0.425,
-   event:'Australia @ Argentina', commence_time:'Jun 20, 06:00 PM', sport:'soccer_wc2026',
-   tier:'A', market_key:'totals', elo_home:2113, elo_away:1783, engine:'dixon_coles',
-   kelly_bet:4.0, potential_win:5.40,
-   recorded_at:'2026-06-18T10:00:00'},
-];
 
 /* ===== helpers ===== */
 function calcPL(b){
@@ -1053,16 +1003,12 @@ async function load(){
   try{
     const r = await fetch('wc_data.json?t='+Date.now());
     const data = await r.json();
-    if(Array.isArray(data) && data.length){
-      BETS = data; IS_DEMO = false;
-    } else {
-      BETS = FALLBACK_BETS.slice(); IS_DEMO = true;
-    }
+    BETS = (Array.isArray(data) && data.length) ? data : [];
+    IS_DEMO = false;
     BETS.forEach((b,i)=>b._id=i);
     render();
   }catch(e){
-    BETS = FALLBACK_BETS.slice(); IS_DEMO = true;
-    BETS.forEach((b,i)=>b._id=i);
+    BETS = []; IS_DEMO = false;
     render();
   }
 }
