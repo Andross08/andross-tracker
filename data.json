@@ -8834,7 +8834,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-01T13:59:39.120469",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 3.0,
+    "graded_at": "2026-06-02T09:56:03.255399"
   },
   {
     "player_name": "Keldon Johnson",
