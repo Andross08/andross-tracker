@@ -8907,7 +8907,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-02T09:54:49.779690",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 2.0,
+    "graded_at": "2026-06-03T08:33:08.634631"
   },
   {
     "player_name": "Dylan Harper",
@@ -9015,7 +9017,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-02T09:54:49.805765",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 7.0,
+    "graded_at": "2026-06-03T08:33:08.635970"
   },
   {
     "player_name": "Connor Prielipp",
@@ -9049,7 +9053,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-02T09:54:49.816051",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 7.0,
+    "graded_at": "2026-06-03T08:33:08.637549"
   },
   {
     "player_name": "Bryce Elder",
@@ -9083,7 +9089,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-02T09:54:49.824425",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 6.0,
+    "graded_at": "2026-06-03T08:33:08.638296"
   },
   {
     "player_name": "Miles McBride",
