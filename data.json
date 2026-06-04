@@ -8873,7 +8873,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-02T09:54:49.769855",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 3.0,
+    "graded_at": "2026-06-04T08:29:50.586726"
   },
   {
     "player_name": "Davis Martin",
@@ -8946,7 +8948,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-02T09:54:49.787805",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 16.0,
+    "graded_at": "2026-06-04T08:29:50.587760"
   },
   {
     "player_name": "De'Aaron Fox",
@@ -8983,7 +8987,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-02T09:54:49.796904",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 16.0,
+    "graded_at": "2026-06-04T08:29:50.589219"
   },
   {
     "player_name": "Nathan Eovaldi",
@@ -9128,7 +9134,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-03T08:31:48.592917",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 1.0,
+    "graded_at": "2026-06-04T08:29:50.590335"
   },
   {
     "player_name": "Miles McBride",
@@ -9165,7 +9173,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-03T08:31:48.601485",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 6.0,
+    "graded_at": "2026-06-04T08:29:50.591008"
   },
   {
     "player_name": "Stephon Castle",
@@ -9202,7 +9212,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-03T08:31:48.609651",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 8.0,
+    "graded_at": "2026-06-04T08:29:50.591728"
   },
   {
     "player_name": "Max Meyer",
@@ -9236,7 +9248,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-03T08:31:48.617786",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 7.0,
+    "graded_at": "2026-06-04T08:29:50.592307"
   },
   {
     "player_name": "Keldon Johnson",
