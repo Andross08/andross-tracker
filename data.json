@@ -9287,7 +9287,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-04T08:28:46.705634",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 3.0,
+    "graded_at": "2026-06-08T10:34:13.496795"
   },
   {
     "player_name": "De'Aaron Fox",
@@ -9324,7 +9326,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-04T08:28:46.713947",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 20.0,
+    "graded_at": "2026-06-08T10:34:13.497648"
   },
   {
     "player_name": "Keldon Johnson",
@@ -9361,7 +9365,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-04T08:28:46.720770",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 9.0,
+    "graded_at": "2026-06-08T10:34:13.498302"
   },
   {
     "player_name": "Stephon Castle",
@@ -9398,7 +9404,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-04T08:28:46.726500",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 22.0,
+    "graded_at": "2026-06-08T10:34:13.499055"
   },
   {
     "player_name": "Stephon Castle",
@@ -9435,7 +9443,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-04T08:28:46.732338",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 4.0,
+    "graded_at": "2026-06-08T10:34:13.499679"
   },
   {
     "player_name": "Karl-Anthony Towns",
@@ -9472,7 +9482,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-04T08:28:46.737031",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 13.0,
+    "graded_at": "2026-06-08T10:34:13.500280"
   },
   {
     "player_name": "Foster Griffin",
@@ -9506,7 +9518,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-05T08:50:53.603420",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 4.0,
+    "graded_at": "2026-06-08T10:34:13.501901"
   },
   {
     "player_name": "Miles McBride",
@@ -9543,7 +9557,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-05T08:50:53.612890",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 5.0,
+    "graded_at": "2026-06-08T10:34:13.503553"
   },
   {
     "player_name": "Karl-Anthony Towns",
@@ -9580,7 +9596,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-05T08:50:53.622520",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 38.0,
+    "graded_at": "2026-06-08T10:34:13.504657"
   },
   {
     "player_name": "Keldon Johnson",
