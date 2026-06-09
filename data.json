@@ -9635,7 +9635,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-08T10:31:19.724384",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 7.0,
+    "graded_at": "2026-06-09T10:17:45.826941"
   },
   {
     "player_name": "Stephon Castle",
@@ -9672,7 +9674,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-08T10:31:19.730652",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 33.0,
+    "graded_at": "2026-06-09T10:17:45.829376"
   },
   {
     "player_name": "Mikal Bridges",
@@ -9709,7 +9713,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-08T10:31:19.737474",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 9.0,
+    "graded_at": "2026-06-09T10:17:45.830182"
   },
   {
     "player_name": "Keldon Johnson",
