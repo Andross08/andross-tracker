@@ -9860,7 +9860,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-09T10:14:06.171079",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 11.0,
+    "graded_at": "2026-06-10T11:34:15.909760"
   },
   {
     "player_name": "Nathan Eovaldi",
@@ -9894,7 +9896,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-09T10:14:06.180231",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 3.0,
+    "graded_at": "2026-06-10T11:34:15.910440"
   },
   {
     "player_name": "Stephon Castle",
@@ -10002,7 +10006,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-09T10:14:06.209879",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 2.0,
+    "graded_at": "2026-06-10T11:34:15.911776"
   },
   {
     "player_name": "Bosnia & Herzegovina @ Canada",
