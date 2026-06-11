@@ -9752,7 +9752,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-09T10:14:06.151559",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 2.0,
+    "graded_at": "2026-06-11T09:38:01.573743"
   },
   {
     "player_name": "De'Aaron Fox",
@@ -9789,7 +9791,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-09T10:14:06.157829",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 18.0,
+    "graded_at": "2026-06-11T09:38:01.574667"
   },
   {
     "player_name": "Keldon Johnson",
@@ -9826,7 +9830,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-09T10:14:06.163616",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 7.0,
+    "graded_at": "2026-06-11T09:38:01.575878"
   },
   {
     "player_name": "Dylan Cease",
@@ -9935,7 +9941,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-09T10:14:06.191598",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 23.0,
+    "graded_at": "2026-06-11T09:38:01.576975"
   },
   {
     "player_name": "Stephon Castle",
@@ -9972,7 +9980,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-09T10:14:06.203145",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 5.0,
+    "graded_at": "2026-06-11T09:38:01.577904"
   },
   {
     "player_name": "Colin Rea",
@@ -10540,7 +10550,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-10T11:33:36.042500",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 0.0,
+    "graded_at": "2026-06-11T09:38:01.583286"
   },
   {
     "player_name": "Luke Kornet",
@@ -10577,7 +10589,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-10T11:33:36.054517",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 0.0,
+    "graded_at": "2026-06-11T09:38:01.583949"
   },
   {
     "player_name": "Michael Wacha",
