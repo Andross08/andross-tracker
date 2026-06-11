@@ -671,6 +671,19 @@ function matchFilter(b){
   if(!matchPeriod(b)) return false;
   return true;
 }
+
+/* ===== VISIBILIDAD POR FECHA (solo display — el JSON no se modifica) =====
+   Una pick PENDIENTE aparece recien VISIBILITY_H horas antes de su partido
+   (commence_time): la pick de las 7 PM se publica a las 7 AM del mismo dia,
+   con margen para verificar lineas antes de que sea publica. Las gradeadas
+   (won/lost/void) se muestran siempre — son los receipts. */
+const VISIBILITY_H = 12;
+function isVisible(b){
+  if(b.status !== 'pending') return true;
+  const d = commenceDate(b);
+  if(!d) return true;                                 // sin fecha parseable: no ocultar
+  return d.getTime() <= Date.now() + VISIBILITY_H*3600*1000;
+}
 function fmtPct(x){return x==null?'—':(x*100).toFixed(1)+'%';}
 
 /* ===== STATS ===== */
@@ -1003,7 +1016,7 @@ async function load(){
   try{
     const r = await fetch('wc_data.json?t='+Date.now());
     const data = await r.json();
-    BETS = (Array.isArray(data) && data.length) ? data : [];
+    BETS = (Array.isArray(data) && data.length) ? data.filter(isVisible) : [];
     IS_DEMO = false;
     BETS.forEach((b,i)=>b._id=i);
     render();
