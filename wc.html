@@ -382,6 +382,8 @@ body{
 .empty .em-title{font-size:24px;font-weight:900;color:var(--blue-3);letter-spacing:-.5px;margin-bottom:10px;position:relative}
 .empty .em-sub{font-size:14px;color:var(--t2);font-weight:500;max-width:460px;margin:0 auto;line-height:1.55;position:relative}
 .empty .em-date{margin-top:22px;display:inline-block;padding:12px 22px;border:1.5px solid var(--gold-bd);border-radius:10px;font-weight:800;letter-spacing:1.5px;color:var(--gold-3);font-size:12px;position:relative;background:var(--gold-bg)}
+/* Día pasado/presente sin pick de valor (placeholder dentro del day-group) */
+.day-empty{background:var(--bg2);border:1px dashed var(--bd2);border-radius:11px;padding:18px 18px;color:var(--t2);font-size:13.5px;font-weight:600;text-align:center;letter-spacing:.2px}
 
 /* ===== FOOTER ===== */
 .footer{text-align:center;padding:38px 20px 12px;color:var(--t3);font-size:11px;letter-spacing:1.2px;font-weight:600}
@@ -482,6 +484,7 @@ body{
 const STAKE = 5;
 let BETS = [];
 let IS_DEMO = false;
+let FETCH_OK = false;  // true si wc_data.json cargó como array (aunque quede vacío tras filtros)
 const F = {
   periodMode:'total',  // 'total' | 'day' | 'week'
   periodDay:null,      // number when periodMode='day'
@@ -618,6 +621,25 @@ function weekNum(b){
   const dn = dayNum(b);
   if(dn == null) return null;
   return Math.ceil(dn/7);
+}
+/* Número de día del Mundial para HOY (Día 1 = 11 Jun). Sirve para distinguir
+   días pasados/presentes (<=hoy) de días futuros aún ocultos por el filtro
+   de 12h. */
+function todayDayNum(){
+  const start = new Date(WC_START.getFullYear(), WC_START.getMonth(), WC_START.getDate());
+  const now = new Date();
+  const cur = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((cur - start) / 86400000) + 1;
+}
+/* Fecha calendario de un número de día (para el header del grupo vacío). */
+function dayDate(d){
+  return new Date(WC_START.getFullYear(), WC_START.getMonth(), WC_START.getDate() + (d - 1));
+}
+/* ¿El día N entra en el filtro de Periodo actual? */
+function dayMatchesPeriod(d){
+  if(F.periodMode === 'day'  && F.periodDay  != null) return d === F.periodDay;
+  if(F.periodMode === 'week' && F.periodWeek != null) return Math.ceil(d/7) === F.periodWeek;
+  return true;
 }
 function phaseOf(b){
   const d = commenceDate(b);
@@ -872,14 +894,6 @@ function renderFilters(){
 function renderBets(){
   const fb = BETS.filter(matchFilter);
   const cont = document.getElementById('bets');
-  if(!fb.length){
-    cont.innerHTML = `<div class="empty filter-empty">
-        <div style="font-size:42px;margin-bottom:12px;opacity:.5">🔍</div>
-        <div class="em-title" style="font-size:18px">No hay picks para este periodo</div>
-        <div class="em-sub" style="margin-top:6px">Probá cambiar los filtros o seleccionar otro día/semana.</div>
-      </div>`;
-    return;
-  }
   const byDay = {};
   fb.forEach(b=>{
     const d = dayNum(b);
@@ -887,14 +901,46 @@ function renderBets(){
     if(!byDay[key]) byDay[key] = {day:d, date:commenceDate(b), bets:[]};
     byDay[key].bets.push(b);
   });
+
+  // Días pasados/presentes sin pick de valor visible -> grupo placeholder con
+  // el mensaje. NUNCA para días futuros: esos siguen ocultos por el filtro de
+  // 12h y simplemente no aparecen. Se omite cuando hay filtro de mercado/fase
+  // activo, porque ahí la vista está intencionalmente recortada y "no se
+  // encontró value" sería engañoso.
+  if(F.markets.size === 0 && F.phase === 'all'){
+    const maxDay = todayDayNum();
+    for(let d = 1; d <= maxDay; d++){
+      if(byDay[d] || !dayMatchesPeriod(d)) continue;
+      byDay[d] = {day:d, date:dayDate(d), bets:[], empty:true};
+    }
+  }
+
   const groups = Object.values(byDay).sort((a,b)=>{
     if(a.day==null) return 1;
     if(b.day==null) return -1;
     return b.day - a.day;
   });
 
+  if(!groups.length){
+    cont.innerHTML = `<div class="empty filter-empty">
+        <div style="font-size:42px;margin-bottom:12px;opacity:.5">🔍</div>
+        <div class="em-title" style="font-size:18px">No hay picks para este periodo</div>
+        <div class="em-sub" style="margin-top:6px">Probá cambiar los filtros o seleccionar otro día/semana.</div>
+      </div>`;
+    return;
+  }
+
   let html = '';
   groups.forEach((g, gi)=>{
+    // Día pasado/presente sin pick de valor: header + mensaje, sin apuestas.
+    if(g.empty){
+      const dLabel = g.date ? dateLabel(g.date) : '';
+      html += `<div class="day-group" style="animation-delay:${Math.min(gi*.04,.4)}s">`
+           + `<div class="day-hdr"><div class="day-n">DÍA ${g.day}</div><div class="day-d">${dLabel}</div></div>`
+           + `<div class="day-empty">Día ${g.day} — no se encontró ningún pick de valor.</div>`
+           + `</div>`;
+      return;
+    }
     const gw = g.bets.filter(b=>b.status==='won').length;
     const gl = g.bets.filter(b=>b.status==='lost').length;
     const gp = g.bets.filter(b=>b.status==='pending').length;
@@ -960,7 +1006,11 @@ function detailHTML(b){
 /* ===== ORCHESTRATION ===== */
 function render(){
   const meta = document.getElementById('meta');
-  if(!BETS.length){
+  // Estado global "aún no hay picks publicadas" SOLO si el fetch falló o el
+  // torneo todavía no arrancó. Si ya arrancó (Día >=1) y el fetch fue OK,
+  // renderizamos el contenido aunque no haya picks de valor visibles: así cada
+  // día pasado/presente muestra su mensaje "no se encontró ningún pick de valor".
+  if(!BETS.length && (!FETCH_OK || todayDayNum() < 1)){
     document.getElementById('content').style.display='none';
     document.getElementById('empty').style.display='block';
     meta.textContent = 'WORLD CUP 26 · 0 picks';
@@ -1016,11 +1066,17 @@ async function load(){
   try{
     const r = await fetch('wc_data.json?t='+Date.now());
     const data = await r.json();
-    BETS = (Array.isArray(data) && data.length) ? data.filter(isVisible) : [];
+    FETCH_OK = Array.isArray(data);
+    // Solo picks de valor del modelo. Las manuales (is_value:false, ej. los
+    // openers México ML / BTTS No) se ocultan de la vista — el JSON no se toca.
+    BETS = (Array.isArray(data) && data.length)
+      ? data.filter(b => b.is_value !== false).filter(isVisible)
+      : [];
     IS_DEMO = false;
     BETS.forEach((b,i)=>b._id=i);
     render();
   }catch(e){
+    FETCH_OK = false;
     BETS = []; IS_DEMO = false;
     render();
   }
