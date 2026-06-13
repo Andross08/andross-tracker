@@ -30,7 +30,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:25.534764",
-    "status": "pending"
+    "status": "void",
+    "void_reason": "retired_over_market",
+    "voided_at": "2026-06-13T20:12:36Z"
   },
   {
     "player_name": "Paraguay @ USA",
@@ -63,7 +65,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:26.767749",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 5,
+    "graded_at": "2026-06-13T16:07:32.114709"
   },
   {
     "player_name": "Morocco @ Brazil",
@@ -393,7 +397,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:41.784740",
-    "status": "pending"
+    "status": "void",
+    "void_reason": "retired_over_market",
+    "voided_at": "2026-06-13T20:12:36Z"
   },
   {
     "player_name": "Senegal @ France",
@@ -439,7 +445,7 @@
     "engine": "manual",
     "mode": "manual",
     "recorded_at": "2026-06-09T15:43:20.336816",
-    "status": "pending",
+    "status": "void",
     "edge_flagged": false,
     "is_value": false,
     "season_avg": "N/A",
@@ -459,7 +465,9 @@
     "market_key": "h2h",
     "kelly_bet": 3.0,
     "kelly_bet_full": 3.0,
-    "potential_win": 1.28
+    "potential_win": 1.28,
+    "void_reason": "retired_pre_match",
+    "voided_at": "2026-06-13T20:04:14Z"
   },
   {
     "event": "South Africa @ Mexico",
@@ -472,7 +480,7 @@
     "engine": "manual",
     "mode": "manual",
     "recorded_at": "2026-06-09T15:43:20.336816",
-    "status": "pending",
+    "status": "void",
     "edge_flagged": false,
     "is_value": false,
     "season_avg": "N/A",
@@ -492,6 +500,8 @@
     "market_key": "btts",
     "kelly_bet": 3.0,
     "kelly_bet_full": 3.0,
-    "potential_win": 1.5
+    "potential_win": 1.5,
+    "void_reason": "retired_pre_match",
+    "voided_at": "2026-06-13T20:04:14Z"
   }
 ]
