@@ -10698,7 +10698,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-12T15:20:23.921566",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 2.0,
+    "graded_at": "2026-06-13T15:51:39.437359"
   },
   {
     "player_name": "Karl-Anthony Towns",
@@ -10843,7 +10845,9 @@
     "sport": "baseball_mlb",
     "mode": "simulation",
     "recorded_at": "2026-06-12T15:20:23.945083",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 6.0,
+    "graded_at": "2026-06-13T15:51:39.439311"
   },
   {
     "player_name": "Stephon Castle",
