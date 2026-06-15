@@ -15,12 +15,12 @@
     "season_hit_rate": "Model: O2.5 63%",
     "recent_hit_rate": "N/A",
     "consistency": "Dixon-Coles",
-    "is_value": true,
+    "is_value": false,
     "kelly_bet": 4.68,
     "kelly_bet_full": 4.68,
     "potential_win": 5.85,
     "event": "Bosnia & Herzegovina @ Canada",
-    "commence_time": "Jun 12, 07:00 PM",
+    "commence_time": "2026-06-12T19:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "totals",
@@ -30,7 +30,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:25.534764",
-    "status": "pending"
+    "status": "void",
+    "void_reason": "retired_over_market",
+    "voided_at": "2026-06-13T20:12:36Z"
   },
   {
     "player_name": "Paraguay @ USA",
@@ -53,7 +55,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 1.56,
     "event": "Paraguay @ USA",
-    "commence_time": "Jun 13, 01:00 AM",
+    "commence_time": "2026-06-13T01:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "totals",
@@ -63,7 +65,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:26.767749",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 5,
+    "graded_at": "2026-06-13T16:07:32.114709"
   },
   {
     "player_name": "Morocco @ Brazil",
@@ -86,7 +90,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 11.0,
     "event": "Morocco @ Brazil",
-    "commence_time": "Jun 13, 10:00 PM",
+    "commence_time": "2026-06-13T22:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "A",
     "market_key": "totals",
@@ -96,7 +100,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:29.249328",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 2,
+    "graded_at": "2026-06-14T11:22:02.839981"
   },
   {
     "player_name": "Morocco @ Brazil",
@@ -119,7 +125,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 1.8,
     "event": "Morocco @ Brazil",
-    "commence_time": "Jun 13, 10:00 PM",
+    "commence_time": "2026-06-13T22:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "btts",
@@ -129,7 +135,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:29.260709",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": "1-1",
+    "graded_at": "2026-06-14T11:22:02.839981"
   },
   {
     "player_name": "Curaçao @ Germany",
@@ -152,7 +160,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 1.67,
     "event": "Curaçao @ Germany",
-    "commence_time": "Jun 14, 05:00 PM",
+    "commence_time": "2026-06-14T17:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "totals",
@@ -185,7 +193,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 7.21,
     "event": "Ecuador @ Ivory Coast",
-    "commence_time": "Jun 14, 11:00 PM",
+    "commence_time": "2026-06-14T23:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "totals",
@@ -218,7 +226,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 1.46,
     "event": "Ecuador @ Ivory Coast",
-    "commence_time": "Jun 14, 11:00 PM",
+    "commence_time": "2026-06-14T23:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "btts",
@@ -251,7 +259,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 10.3,
     "event": "Cape Verde @ Spain",
-    "commence_time": "Jun 15, 04:00 PM",
+    "commence_time": "2026-06-15T16:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "totals",
@@ -284,7 +292,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 12.17,
     "event": "Egypt @ Belgium",
-    "commence_time": "Jun 15, 07:00 PM",
+    "commence_time": "2026-06-15T19:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "totals",
@@ -317,7 +325,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 11.93,
     "event": "Uruguay @ Saudi Arabia",
-    "commence_time": "Jun 15, 10:00 PM",
+    "commence_time": "2026-06-15T22:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "A",
     "market_key": "totals",
@@ -350,7 +358,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 1.51,
     "event": "Uruguay @ Saudi Arabia",
-    "commence_time": "Jun 15, 10:00 PM",
+    "commence_time": "2026-06-15T22:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "btts",
@@ -378,12 +386,12 @@
     "season_hit_rate": "Model: O2.5 62%",
     "recent_hit_rate": "N/A",
     "consistency": "Dixon-Coles",
-    "is_value": true,
+    "is_value": false,
     "kelly_bet": 4.68,
     "kelly_bet_full": 4.68,
     "potential_win": 6.65,
     "event": "New Zealand @ Iran",
-    "commence_time": "Jun 16, 01:00 AM",
+    "commence_time": "2026-06-16T01:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "A",
     "market_key": "totals",
@@ -393,7 +401,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:41.784740",
-    "status": "pending"
+    "status": "void",
+    "void_reason": "retired_over_market",
+    "voided_at": "2026-06-13T20:12:36Z"
   },
   {
     "player_name": "Senegal @ France",
@@ -416,7 +426,7 @@
     "kelly_bet_full": 4.68,
     "potential_win": 12.17,
     "event": "Senegal @ France",
-    "commence_time": "Jun 16, 07:00 PM",
+    "commence_time": "2026-06-16T19:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
     "market_key": "totals",
@@ -439,7 +449,7 @@
     "engine": "manual",
     "mode": "manual",
     "recorded_at": "2026-06-09T15:43:20.336816",
-    "status": "pending",
+    "status": "void",
     "edge_flagged": false,
     "is_value": false,
     "season_avg": "N/A",
@@ -459,7 +469,9 @@
     "market_key": "h2h",
     "kelly_bet": 3.0,
     "kelly_bet_full": 3.0,
-    "potential_win": 1.28
+    "potential_win": 1.28,
+    "void_reason": "retired_pre_match",
+    "voided_at": "2026-06-13T20:04:14Z"
   },
   {
     "event": "South Africa @ Mexico",
@@ -472,7 +484,7 @@
     "engine": "manual",
     "mode": "manual",
     "recorded_at": "2026-06-09T15:43:20.336816",
-    "status": "pending",
+    "status": "void",
     "edge_flagged": false,
     "is_value": false,
     "season_avg": "N/A",
@@ -492,6 +504,8 @@
     "market_key": "btts",
     "kelly_bet": 3.0,
     "kelly_bet_full": 3.0,
-    "potential_win": 1.5
+    "potential_win": 1.5,
+    "void_reason": "retired_pre_match",
+    "voided_at": "2026-06-13T20:04:14Z"
   }
 ]
