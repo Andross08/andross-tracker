@@ -170,7 +170,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:33.133266",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 8,
+    "graded_at": "2026-06-14T23:15:09.825778"
   },
   {
     "player_name": "Ecuador @ Ivory Coast",
@@ -203,7 +205,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:35.364757",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 1,
+    "graded_at": "2026-06-14T23:15:09.825950"
   },
   {
     "player_name": "Ecuador @ Ivory Coast",
@@ -236,7 +240,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:35.374259",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": "1-0",
+    "graded_at": "2026-06-14T23:15:09.826045"
   },
   {
     "player_name": "Cape Verde @ Spain",
