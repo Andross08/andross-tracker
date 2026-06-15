@@ -856,6 +856,7 @@ function drawPL(){
 
 /* ===== FILTERS UI ===== */
 function renderFilters(){
+  const vis = BETS.filter(b => b.status !== 'void');   // void = veto pre-partido: fuera de los contadores de navegación (pills)
   // PERIODO
   const tabs = [
     {key:'total', label:'Total'},
@@ -870,18 +871,18 @@ function renderFilters(){
   const sub = document.getElementById('periodSubs');
   if(F.periodMode === 'day'){
     sub.style.display = 'flex';
-    const days = [...new Set(BETS.map(dayNum).filter(d=>d!=null))].sort((a,b)=>a-b);
+    const days = [...new Set(vis.map(dayNum).filter(d=>d!=null))].sort((a,b)=>a-b);
     sub.innerHTML = `<button class="pill ${F.periodDay==null?'on':''}" data-pday="all">Todos los días</button>` +
       days.map(d=>{
-        const n = BETS.filter(b=>dayNum(b)===d).length;
+        const n = vis.filter(b=>dayNum(b)===d).length;
         return `<button class="pill ${F.periodDay===d?'on':''}" data-pday="${d}">D${d}${n?` <span class="c">${n}</span>`:''}</button>`;
       }).join('');
   } else if(F.periodMode === 'week'){
     sub.style.display = 'flex';
-    const weeks = [...new Set(BETS.map(weekNum).filter(w=>w!=null))].sort((a,b)=>a-b);
+    const weeks = [...new Set(vis.map(weekNum).filter(w=>w!=null))].sort((a,b)=>a-b);
     sub.innerHTML = `<button class="pill ${F.periodWeek==null?'on':''}" data-pweek="all">Todas las semanas</button>` +
       weeks.map(w=>{
-        const n = BETS.filter(b=>weekNum(b)===w).length;
+        const n = vis.filter(b=>weekNum(b)===w).length;
         return `<button class="pill ${F.periodWeek===w?'on':''}" data-pweek="${w}">Sem ${w}${n?` <span class="c">${n}</span>`:''}</button>`;
       }).join('');
   } else {
@@ -892,7 +893,7 @@ function renderFilters(){
   // MERCADOS (multi)
   const markets = ['H2H','O/U Main','Alt Totals','BTTS'];
   document.getElementById('marketTog').innerHTML = markets.map(m=>{
-    const n = BETS.filter(b=>marketOf(b)===m).length;
+    const n = vis.filter(b=>marketOf(b)===m).length;
     const icon = MARKET_ICON[m] || '';
     return `<button class="pill market ${F.markets.has(m)?'on':''}" data-market="${m}"><span>${icon}</span> ${m}${n?` <span class="c">${n}</span>`:''}</button>`;
   }).join('');
@@ -902,14 +903,14 @@ function renderFilters(){
   document.getElementById('phaseTog').innerHTML =
     `<button class="pill phase ${F.phase==='all'?'on':''}" data-phase="all">Todas</button>` +
     phases.map(p=>{
-      const n = BETS.filter(b=>phaseOf(b)===p).length;
+      const n = vis.filter(b=>phaseOf(b)===p).length;
       return `<button class="pill phase ${F.phase===p?'on':''}" data-phase="${p}">${p}${n?` <span class="c">${n}</span>`:''}</button>`;
     }).join('');
 }
 
 /* ===== BETS LIST ===== */
 function renderBets(){
-  const fb = BETS.filter(matchFilter);
+  const fb = BETS.filter(matchFilter).filter(b => b.status !== 'void');   // void = veto pre-partido: oculto de la lista (no toca stats ni la fuente)
   const cont = document.getElementById('bets');
   const byDay = {};
   fb.forEach(b=>{
