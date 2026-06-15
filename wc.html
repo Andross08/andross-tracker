@@ -594,11 +594,28 @@ function calcPL(b){
   return 0;
 }
 function parseISO(s){if(!s)return null;try{const d=new Date(s);return isNaN(d)?null:d;}catch{return null;}}
+// Instante REAL del kickoff (absoluto). Lo usa el filtro de 12h: comparar contra
+// Date.now() debe hacerse sobre el instante, no sobre el wall-clock.
+function commenceInstant(b){
+  const ct = b.commence_time||'';
+  if(ct.includes('T')){                  // ISO UTC (formato nuevo) -> instante correcto
+    const iso = parseISO(ct);
+    if(iso) return iso;
+  }
+  return commenceDate(b);                 // formato viejo: cae al parse naive de abajo
+}
+// Fecha/hora en HORA DEL ESTE (para agrupar por día y los labels), independiente
+// del navegador del viewer. El bot guarda commence_time en ISO UTC; acá se
+// convierte a America/New_York (Intl sí resuelve la zona aunque Python no).
 function commenceDate(b){
   const ct = b.commence_time||'';
-  // Bot format first ("Jun 11, 08:00 PM" — no year). new Date() of this
-  // string parses to year 1900 silently, so we must check the regex BEFORE
-  // falling back to ISO parsing.
+  // Formato nuevo: ISO UTC -> wall-clock del Este.
+  if(ct.includes('T')){
+    const iso = parseISO(ct);
+    if(iso) return new Date(iso.toLocaleString('en-US',{timeZone:'America/New_York'}));
+  }
+  // Formato viejo ("Jun 11, 08:00 PM" — sin año, UTC mal etiquetado). new Date()
+  // de este string da año 1900 silencioso, así que el regex va ANTES del parseISO.
   const m = ct.match(/^(\w+)\s+(\d+),\s+(\d+):(\d+)\s+(AM|PM)$/);
   if(m){
     const months={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
@@ -702,7 +719,7 @@ function matchFilter(b){
 const VISIBILITY_H = 12;
 function isVisible(b){
   if(b.status !== 'pending') return true;
-  const d = commenceDate(b);
+  const d = commenceInstant(b);                       // instante real, no wall-clock ET
   if(!d) return true;                                 // sin fecha parseable: no ocultar
   return d.getTime() <= Date.now() + VISIBILITY_H*3600*1000;
 }
