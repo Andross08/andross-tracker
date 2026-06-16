@@ -450,7 +450,8 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-09T15:04:43.358978",
-    "status": "pending"
+    "status": "void",
+    "void_reason": "alt-line dedup, se mantiene U3.5"
   },
   {
     "event": "South Africa @ Mexico",
