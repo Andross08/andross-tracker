@@ -11117,7 +11117,8 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-14T23:47:25.076327",
-    "status": "pending"
+    "status": "void",
+    "void_reason": "alt-line dedup, se mantiene U3.5"
   },
   {
     "player_name": "Morocco @ Scotland",
