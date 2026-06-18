@@ -10161,7 +10161,7 @@
     "graded_at": "2026-06-14T11:22:02.839981"
   },
   {
-    "player_name": "Curaçao @ Germany",
+    "player_name": "Cura\u00e7ao @ Germany",
     "prop_type": "Goals Under 4.5",
     "line": 4.5,
     "odds_american": "-140",
@@ -10180,7 +10180,7 @@
     "kelly_bet": 2.34,
     "kelly_bet_full": 4.68,
     "potential_win": 1.67,
-    "event": "Curaçao @ Germany",
+    "event": "Cura\u00e7ao @ Germany",
     "commence_time": "2026-06-14T17:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "B",
@@ -10693,7 +10693,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-12T15:20:23.911289",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 7.0,
+    "graded_at": "2026-06-18T14:14:06.346559"
   },
   {
     "player_name": "Ryan Weathers",
@@ -10766,7 +10768,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-12T15:20:23.926739",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 13.0,
+    "graded_at": "2026-06-18T14:14:06.347406"
   },
   {
     "player_name": "De'Aaron Fox",
@@ -10803,7 +10807,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-12T15:20:23.934599",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 12.0,
+    "graded_at": "2026-06-18T14:14:06.348539"
   },
   {
     "player_name": "Stephon Castle",
@@ -10840,7 +10846,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-12T15:20:23.940041",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 15.0,
+    "graded_at": "2026-06-18T14:14:06.349675"
   },
   {
     "player_name": "Nolan McLean",
@@ -10913,7 +10921,9 @@
     "sport": "basketball_nba",
     "mode": "simulation",
     "recorded_at": "2026-06-13T15:50:40.446457",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 5.0,
+    "graded_at": "2026-06-18T14:14:06.350754"
   },
   {
     "player_name": "Norway @ Iraq",
@@ -11220,7 +11230,7 @@
     "status": "pending"
   },
   {
-    "player_name": "Curaçao @ Ecuador",
+    "player_name": "Cura\u00e7ao @ Ecuador",
     "prop_type": "Goals Under 3.5",
     "line": 3.5,
     "odds_american": "-165",
@@ -11239,7 +11249,7 @@
     "kelly_bet": 2.34,
     "kelly_bet_full": 4.68,
     "potential_win": 1.42,
-    "event": "Curaçao @ Ecuador",
+    "event": "Cura\u00e7ao @ Ecuador",
     "commence_time": "2026-06-21T00:00:00Z",
     "sport": "soccer_wc2026",
     "tier": "A",
