@@ -11445,7 +11445,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-15T22:08:26.580874",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 2,
+    "graded_at": "2026-06-24T11:39:40.216936"
   },
   {
     "player_name": "Iraq @ France",
@@ -11478,7 +11480,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-15T22:08:28.351391",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 3,
+    "graded_at": "2026-06-24T11:39:40.217513"
   },
   {
     "player_name": "Uzbekistan @ Portugal",
@@ -11511,7 +11515,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-17T09:03:55.120424",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 5,
+    "graded_at": "2026-06-24T11:39:40.217861"
   },
   {
     "player_name": "Ghana @ England",
@@ -11544,7 +11550,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-17T09:03:56.216235",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 0,
+    "graded_at": "2026-06-24T11:39:40.218436"
   },
   {
     "player_name": "DR Congo @ Colombia",
@@ -11577,7 +11585,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-17T09:03:58.418394",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 1,
+    "graded_at": "2026-06-24T11:39:40.219592"
   },
   {
     "player_name": "Haiti @ Brazil",
@@ -11711,7 +11721,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:31:48.252589",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 3,
+    "graded_at": "2026-06-24T11:39:40.220927"
   },
   {
     "player_name": "Haiti @ Morocco",
@@ -12074,6 +12086,72 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:32:19.807848",
+    "status": "pending"
+  },
+  {
+    "player_name": "Qatar @ Bosnia & Herzegovina",
+    "prop_type": "Goals Under 2.5",
+    "line": 2.5,
+    "odds_american": "+152",
+    "odds_decimal": 2.52,
+    "implied_prob": 0.3968,
+    "real_prob": 0.4283,
+    "prob_model_raw": 0.4388,
+    "edge": 0.0315,
+    "edge_flagged": false,
+    "season_avg": 2.93,
+    "recent_avg": "N/A",
+    "season_hit_rate": "Model: O2.5 56%",
+    "recent_hit_rate": "N/A",
+    "consistency": "Dixon-Coles",
+    "is_value": true,
+    "kelly_bet": 4.68,
+    "kelly_bet_full": 4.68,
+    "potential_win": 7.11,
+    "event": "Qatar @ Bosnia & Herzegovina",
+    "commence_time": "2026-06-24T19:00:00Z",
+    "sport": "soccer_wc2026",
+    "tier": "B",
+    "market_key": "totals",
+    "elo_home": 1615.8,
+    "elo_away": 1405.2,
+    "elo_gap": 211,
+    "engine": "dixon_coles",
+    "mode": "simulation",
+    "recorded_at": "2026-06-24T11:37:28.402822",
+    "status": "pending"
+  },
+  {
+    "player_name": "USA @ Turkey",
+    "prop_type": "Goals Under 2.5",
+    "line": 2.5,
+    "odds_american": "+114",
+    "odds_decimal": 2.14,
+    "implied_prob": 0.4673,
+    "real_prob": 0.4979,
+    "prob_model_raw": 0.5081,
+    "edge": 0.0306,
+    "edge_flagged": false,
+    "season_avg": 2.64,
+    "recent_avg": "N/A",
+    "season_hit_rate": "Model: O2.5 49%",
+    "recent_hit_rate": "N/A",
+    "consistency": "Dixon-Coles",
+    "is_value": true,
+    "kelly_bet": 4.68,
+    "kelly_bet_full": 4.68,
+    "potential_win": 5.34,
+    "event": "USA @ Turkey",
+    "commence_time": "2026-06-26T02:00:00Z",
+    "sport": "soccer_wc2026",
+    "tier": "B",
+    "market_key": "totals",
+    "elo_home": 1927.6,
+    "elo_away": 1713.6,
+    "elo_gap": 214,
+    "engine": "dixon_coles",
+    "mode": "simulation",
+    "recorded_at": "2026-06-24T11:37:42.081331",
     "status": "pending"
   }
 ]
