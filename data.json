@@ -11655,7 +11655,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-18T14:21:45.900389",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 3,
+    "graded_at": "2026-06-27T08:30:46.472523"
   },
   {
     "player_name": "Haiti @ Morocco",
@@ -11688,7 +11690,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-18T14:21:46.959156",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 6,
+    "graded_at": "2026-06-27T08:30:46.473060"
   },
   {
     "player_name": "Iraq @ France",
@@ -11756,7 +11760,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:31:58.651998",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 6,
+    "graded_at": "2026-06-27T08:30:46.473547"
   },
   {
     "player_name": "Ivory Coast @ Curaçao",
@@ -11789,7 +11795,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:32:01.732772",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 2,
+    "graded_at": "2026-06-27T08:30:46.474363"
   },
   {
     "player_name": "Germany @ Ecuador",
@@ -11822,7 +11830,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:32:02.827310",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 3,
+    "graded_at": "2026-06-27T08:30:46.475021"
   },
   {
     "player_name": "Germany @ Ecuador",
@@ -11855,7 +11865,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:32:02.839646",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": "2-1",
+    "graded_at": "2026-06-27T08:30:46.475403"
   },
   {
     "player_name": "Netherlands @ Tunisia",
@@ -11888,7 +11900,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:32:05.007298",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 4,
+    "graded_at": "2026-06-27T08:30:46.475844"
   },
   {
     "player_name": "Iraq @ Senegal",
@@ -11921,7 +11935,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:32:09.198144",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 5,
+    "graded_at": "2026-06-27T08:30:46.476316"
   },
   {
     "player_name": "Saudi Arabia @ Cape Verde",
@@ -11954,7 +11970,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:32:10.232468",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 0,
+    "graded_at": "2026-06-27T08:30:46.477096"
   },
   {
     "player_name": "Spain @ Uruguay",
@@ -11987,7 +12005,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-22T08:32:11.329109",
-    "status": "pending"
+    "status": "won",
+    "actual_stat": 1,
+    "graded_at": "2026-06-27T08:30:46.477512"
   },
   {
     "player_name": "England @ Panama",
@@ -12119,7 +12139,9 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-24T11:37:28.402822",
-    "status": "pending"
+    "status": "lost",
+    "actual_stat": 4,
+    "graded_at": "2026-06-27T08:30:46.479122"
   },
   {
     "player_name": "USA @ Turkey",
@@ -12152,6 +12174,72 @@
     "engine": "dixon_coles",
     "mode": "simulation",
     "recorded_at": "2026-06-24T11:37:42.081331",
+    "status": "pending"
+  },
+  {
+    "player_name": "Paraguay @ Germany",
+    "prop_type": "Goals Under 3.5",
+    "line": 3.5,
+    "odds_american": "-250",
+    "odds_decimal": 1.4,
+    "implied_prob": 0.7143,
+    "real_prob": 0.8062,
+    "prob_model_raw": 0.8368,
+    "edge": 0.0919,
+    "edge_flagged": false,
+    "season_avg": 2.11,
+    "recent_avg": "N/A",
+    "season_hit_rate": "Model: O3.5 16%",
+    "recent_hit_rate": "N/A",
+    "consistency": "Dixon-Coles",
+    "is_value": true,
+    "kelly_bet": 2.34,
+    "kelly_bet_full": 4.68,
+    "potential_win": 0.94,
+    "event": "Paraguay @ Germany",
+    "commence_time": "2026-06-29T20:30:00Z",
+    "sport": "soccer_wc2026",
+    "tier": "B",
+    "market_key": "totals",
+    "elo_home": 1913.4,
+    "elo_away": 1844.6,
+    "elo_gap": 68,
+    "engine": "dixon_coles",
+    "mode": "simulation",
+    "recorded_at": "2026-06-27T08:28:37.086232",
+    "status": "pending"
+  },
+  {
+    "player_name": "Cape Verde @ Argentina",
+    "prop_type": "Goals Under 2.5",
+    "line": 2.5,
+    "odds_american": "+138",
+    "odds_decimal": 2.38,
+    "implied_prob": 0.4202,
+    "real_prob": 0.4873,
+    "prob_model_raw": 0.5097,
+    "edge": 0.0671,
+    "edge_flagged": false,
+    "season_avg": 2.64,
+    "recent_avg": "N/A",
+    "season_hit_rate": "Model: O2.5 49%",
+    "recent_hit_rate": "N/A",
+    "consistency": "Dixon-Coles",
+    "is_value": true,
+    "kelly_bet": 4.68,
+    "kelly_bet_full": 4.68,
+    "potential_win": 6.46,
+    "event": "Cape Verde @ Argentina",
+    "commence_time": "2026-07-03T22:00:00Z",
+    "sport": "soccer_wc2026",
+    "tier": "B",
+    "market_key": "totals",
+    "elo_home": 2114.0,
+    "elo_away": 1564.4,
+    "elo_gap": 550,
+    "engine": "dixon_coles",
+    "mode": "simulation",
+    "recorded_at": "2026-06-27T08:28:43.572196",
     "status": "pending"
   }
 ]
